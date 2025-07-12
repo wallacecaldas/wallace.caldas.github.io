@@ -1,23 +1,540 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallace Souza Caldas – Psicólogo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        header {
-            background-color: #3f51b5;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wallace Souza Caldas – Psicólogo</title>
+  <meta name="description" content="Wallace Souza Caldas - Psicólogo em Santos-SP. Atendimento presencial e online com abordagem Cognitivo-Comportamental." />
+  <meta name="author" content="Wallace Souza Caldas" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Montserrat' font-weight='600' font-size='28' fill='%230b1d51'%3EWSC%3C/text%3E%3C/svg%3E" />
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    header {
+      background-color: #0b1d51; /* azul marinho escuro */
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    header p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #fff; /* texto branco */
+      opacity: 0.9;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #0b1d51;
+      font-weight: 700;
+      font-size: 2.25rem;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #0b1d51;
+      padding-bottom: 10px;
+      letter-spacing: 0.05em;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: #0b1d51;
+    }
+    p {
+      font-weight: 400;
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    a.button {
+      display: inline-block;
+      background-color: #0b1d51;
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 15px rgba(11,29,81,0.3);
+      user-select: none;
+      margin-right: 15px;
+    }
+    a.button:hover,
+    a.button:focus {
+      background-color: #162f80;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(22,47,128,0.5);
+      outline: none;
+    }
+
+    /* Container para botões de contato */
+    .contact-buttons {
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    /* Sobre você */
+    #sobre {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      align-items: center;
+      justify-content: center;
+    }
+    #sobre div.photo {
+      flex: 1 1 320px;
+      max-width: 320px;
+      text-align: center;
+    }
+    #sobre div.photo img {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #0b1d51;
+      box-shadow: 0 8px 20px rgba(11,29,81,0.2);
+      transition: transform 0.3s ease;
+    }
+    #sobre div.photo img:hover {
+      transform: scale(1.05);
+    }
+    #sobre div.text {
+      flex: 2 1 480px;
+      max-width: 600px;
+    }
+
+    /* CTA */
+    #cta {
+      background-color: #0b1d51;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 16px;
+      max-width: 900px;
+      margin: 60px auto;
+      box-shadow: 0 8px 24px rgba(11,29,81,0.2);
+    }
+    #cta h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: 0.06em;
+    }
+    #cta p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    .cta-button {
+      font-size: 1.2rem;
+      padding: 18px 42px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.3);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .cta-button:hover,
+    .cta-button:focus {
+      background-color: #162f80;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 28px rgba(255, 255, 255, 0.5);
+      outline: none;
+    }
+
+    /* Cards de serviços */
+    #servicos .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    #servicos .cards > div {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(11,29,81,0.1);
+      padding: 30px 25px;
+      flex: 1 1 280px;
+      max-width: 320px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      cursor: default;
+      user-select: none;
+    }
+    #servicos .cards > div:hover {
+      box-shadow: 0 12px 30px rgba(11,29,81,0.25);
+      transform: translateY(-8px);
+      background-color: #e8efff;
+    }
+    #servicos .cards > div h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: #0b1d51;
+      user-select: text;
+    }
+    #servicos .cards > div p {
+      font-size: 1rem;
+      color: #555;
+      user-select: text;
+    }
+
+    /* Ícones serviços */
+    .icon {
+      font-size: 36px;
+      color: #0b1d51;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    /* Localização */
+    #localizacao p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+    #localizacao iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(11,29,81,0.15);
+      border: none;
+    }
+
+    /* FAQ */
+    #duvidas-frequentes {
+      display: flex;
+      gap: 50px;
+      max-width: 1100px;
+      margin: 80px auto 120px auto;
+      padding: 0 20px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      background-color: #f7faff;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(11,29,81,0.07);
+    }
+    #duvidas-frequentes h2 {
+      width: 100%;
+      color: #0b1d51;
+      font-weight: 700;
+      font-size: 2rem;
+      border-bottom: 3px solid #0b1d51;
+      padding-bottom: 8px;
+      margin-bottom: 30px;
+      letter-spacing: 0.05em;
+    }
+    #faq-menu {
+      flex: 1 1 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    #faq-menu button {
+      background-color: #0b1d51;
+      color: #fff;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      text-align: left;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+      letter-spacing: 0.03em;
+    }
+    #faq-menu button:hover,
+    #faq-menu button:focus {
+      background-color: #162f80;
+      outline: none;
+      transform: translateX(6px);
+    }
+    #faq-menu button.active {
+      background-color: #283593;
+      font-weight: 700;
+      box-shadow: 0 0 10px #283593aa;
+      transform: translateX(8px);
+    }
+    #faq-resposta {
+      flex: 2 1 600px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(11,29,81,0.15);
+      padding: 30px 35px;
+      font-size: 1.1rem;
+      color: #444;
+      min-height: 180px;
+      line-height: 1.6;
+      user-select: text;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #0b1d51;
+      color: #cfd8dc;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* Seção Certificações */
+    #certificacoes {
+      max-width: 1100px;
+      margin: 80px auto 120px auto;
+      padding: 0 20px;
+    }
+    #certificacoes h2 {
+      color: #0b1d51;
+      font-weight: 700;
+      font-size: 2.25rem;
+      margin-bottom: 40px;
+      border-bottom: 3px solid #0b1d51;
+      padding-bottom: 12px;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+    .cert-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .cert-card {
+      background-color: #f9f9f9;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(11,29,81,0.1);
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      cursor: default;
+    }
+    .cert-card:hover {
+      box-shadow: 0 12px 30px rgba(11,29,81,0.25);
+      transform: translateY(-8px);
+      background-color: #e8efff;
+    }
+    .cert-card img {
+      max-width: 120px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 3px rgba(11,29,81,0.15));
+    }
+    .cert-card p {
+      font-size: 1.1rem;
+      color: #444;
+      font-weight: 600;
+      user-select: text;
+    }
+
+    /* Responsividade */
+    @media (max-width: 900px) {
+      #sobre {
+        flex-direction: column;
+        gap: 40px;
+      }
+      #duvidas-frequentes {
+        flex-direction: column;
+        margin: 50px 20px 80px 20px;
+      }
+      #faq-menu, #faq-resposta {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+      #faq-resposta {
+        min-height: 220px;
+      }
+      .contact-buttons {
+        text-align: center;
+      }
+      a.button {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      .cert-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wallace Souza Caldas – Psicólogo</h1>
+    <p>Atendimento Presencial e Online em Santos</p>
+  </header>
+
+  <section id="sobre">
+    <div class="photo">
+      <img
+        src="https://media.licdn.com/dms/image/v2/D4D03AQEkTAIB9MhGPg/profile-displayphoto-crop_800_800/B4DZf_Z9mLHkAI-/0/1752336687410?e=1757548800&v=beta&t=QJNyb1r_Pgg2bsZPSmszqMV5jakdvOezVGMzkyWcJbo"
+        alt="Mãos segurando um cérebro de plástico, simbolizando psicologia e saúde mental"
+        loading="lazy"
+      />
+    </div>
+    <div class="text">
+      <h2>Quem sou eu?</h2>
+      <p>
+        Sou Psicólogo e Neuropsicólogo com atuação em Terapia Cognitivo-Comportamental. Formado pela PUCRS e pós-graduado em Neuropsicologia pela Anhembi Morumbi.
+      </p>
+      <p>
+        Tenho paixão por ajudar pessoas a se reconectarem com sua saúde mental de forma ética, empática e baseada em evidências.
+      </p>
+      <div class="contact-buttons">
+              <a href="https://wa.me/5513996321749" target="_blank" rel="noopener" class="button" aria-label="Entrar em contato pelo WhatsApp">
+          WhatsApp
+        </a>
+        <a href="https://www.linkedin.com/in/wallace-souza-caldas-b6a073203/" target="_blank" rel="noopener" class="button" aria-label="Visitar LinkedIn">
+          LinkedIn
+        </a>
+        <a href="https://www.instagram.com/wallacesouzacaldas?igsh=MW11eWlhazNmOHY3eg%3D%3D&utm_source=qr" target="_blank" rel="noopener" class="button" aria-label="Visitar Instagram">
+          Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+ 
+<!-- Certificações -->
+<section id="certificacoes" aria-label="Certificações, Títulos e Prêmios">
+  <h2>Certificações</h2>
+  <div class="cert-cards">
+    <div class="cert-card">
+      <img src="https://portal.pucrs.br/wp-content/uploads/2024/03/logo_pucrs.png" alt="Logo PUCRS" loading="lazy" />
+      <p>Especialista em Terapia Cognitivo-Comportamental pela PUCRS</p>
+    </div>
+    <div class="cert-card">
+      <img src="https://storage.builderall.com//franquias/2/6458452/editor-html/8370742.png" alt="Logo Anhembi Morumbi" loading="lazy" />
+      <p>Especialista em Neuropsicologia - Avaliação e reabilitação psicológica pela Anhembi Morumbi</p>
+    </div>
+    <div class="cert-card">
+      <img src="http://www.crpsp.org/images/logo.png" alt="Conselho Federal de Psicologia" loading="lazy" />
+      <p>Registro Profissional CRP 06/208027</p>
+    </div>
+  </div>
+</section>
+
+  <section id="servicos">
+    <h2>Meus Serviços</h2>
+    <div class="cards">
+      <div>
+        <span class="icon" aria-hidden="true">💻</span>
+        <h3>Atendimento Online</h3>
+        <p>Realizo sessões de terapia via videochamada, com horário flexível e confidencialidade total.</p>
+      </div>
+      <div>
+        <span class="icon" aria-hidden="true">🏥</span>
+        <h3>Atendimento Presencial</h3>
+        <p>Consultório localizado no Gonzaga, Santos - SP, com ambiente acolhedor e acessível.</p>
+      </div>
+      <div>
+        <span class="icon" aria-hidden="true">🧠</span>
+        <h3>Neuropsicologia</h3>
+        <p>Avaliações neuropsicológicas e reabilitação cognitiva para todas as idades.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="localizacao" aria-label="Localização do consultório">
+    <h2>Localização</h2>
+    <p>Avenida Ana Costa, 228 - Gonzaga, Santos - SP, 11070-000, Brasil</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.892290095031!2d-46.32749448507144!3d-23.962302484536118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce05f90094a9b5%3A0x88276b8cae0ae6a7!2sAvenida%20Ana%20Costa%2C%20228%20-%20Gonzaga%2C%20Santos%20-%20SP%2C%2011070-000!5e0!3m2!1spt-BR!2sbr!4v1699634981234!5m2!1spt-BR!2sbr"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      aria-label="Mapa do endereço do consultório"
+    ></iframe>
+  </section>
+
+<!-- CTA -->
+<section id="cta" style="background-color: white; padding: 60px 20px; text-align: center;">
+  <div class="cta-container">
+    <h2 style="color: #0b1d51; font-size: 2.2rem; font-weight: bold;">Pronto para transformar sua saúde mental?</h2>
+    <p style="color: #444; font-size: 1.2rem; margin-bottom: 25px;">Agende sua consulta e dê o primeiro passo para uma vida mais equilibrada e feliz.</p>
+    <a href="https://wa.me/5513996321749" target="_blank" class="cta-button" style="background-color: #0b1d51; color: white; padding: 16px 32px; font-size: 1.1rem; border-radius: 6px; text-decoration: none; display: inline-block; transition: background-color 0.3s ease, transform 0.3s ease;">
+      Agendar via WhatsApp
+    </a>
+  </div>
+</section>
+
+
+  <section id="duvidas-frequentes" aria-label="Dúvidas frequentes">
+    <h2>Dúvidas Frequentes</h2>
+    <div id="faq-menu" role="list">
+      <button class="active" type="button" aria-selected="true" aria-controls="faq-resposta" id="faq1">Quanto tempo dura cada sessão?</button>
+      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq2">Quanto tempo de terapia é necessário?</button>
+      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq3">Quais as modalidades de pagamento?</button>
+      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq4">Posso fazer sessões eventuais?</button>
+      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq5">O que é preciso para realizar sessões online?</button>
+      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq6">Qual aplicativo é utilizado para a sessão online?</button>
+    </div>
+    <div id="faq-resposta" tabindex="0" aria-live="polite">
+      <p>Cada sessão tem duração média de 50 minutos, que é o padrão para terapia psicológica.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Wallace Souza Caldas - Psicólogo | CRP 06/208027</p>
+  </footer>
+
+  <script>
+    // FAQ interativo simples
+    const faqButtons = document.querySelectorAll('#faq-menu button');
+    const faqResposta = document.getElementById('faq-resposta');
+
+    const respostas = {
+      faq1: 'Cada sessão tem duração média de 50 minutos, que é o padrão para terapia psicológica.',
+      faq2: 'A duração da terapia varia conforme a necessidade do paciente, podendo durar alguns meses ou anos.',
+      faq3: 'Aceitamos pagamentos via PIX, cartão de crédito, débito e boleto bancário.',
+      faq4: 'Sim, sessões eventuais são possíveis, mas o acompanhamento regular é mais eficaz para resultados.',
+      faq5: 'É necessário ter um ambiente reservado, internet estável e dispositivo com câmera e microfone.',
+      faq6: 'Utilizamos aplicativos como Zoom, Google Meet ou Microsoft Teams, conforme a preferência do paciente.'
+    };
+
+    faqButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        faqButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        faqResposta.innerHTML = '<p>' + respostas[btn.id] + '</p>';
+        faqResposta.focus();
+      });
+    });
+  </script>
+</body>
+</html>
+
+
         }
         section {
             max-width: 800px;
