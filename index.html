@@ -9,6 +9,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Montserrat' font-weight='600' font-size='28' fill='%230b1d51'%3EWSC%3C/text%3E%3C/svg%3E" />
   <style>
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.photo img {
+  animation: fadeZoomIn 1s ease-out forwards;
+}
+
+.photo img:hover {
+  transform: scale(1.05) rotate(1deg);
+  transition: transform 0.4s ease;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(36,123,160,0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(36,123,160,0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(36,123,160,0.3);
+  }
+}
     /* Reset básico */
     * {
       box-sizing: border-box;
@@ -23,13 +68,40 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-    header {
-      background-color: #247BA0; /* azul marinho escuro */
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-      font-weight: 600;
-      letter-spacing: 0.05em;
+ header {
+  background-color: #247BA0; /* azul claro */
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+header .topo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header .topo svg {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+header .topo svg:hover {
+  transform: scale(1.1);
+}
+
+header .topo h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
     }
     header h1 {
       font-size: 3rem;
@@ -393,6 +465,7 @@
   <section id="sobre">
     <div class="photo">
       <img
+ class="foto-perfil"
         src="https://media.licdn.com/dms/image/v2/D4D03AQEkTAIB9MhGPg/profile-displayphoto-crop_800_800/B4DZf_Z9mLHkAI-/0/1752336687410?e=1757548800&v=beta&t=QJNyb1r_Pgg2bsZPSmszqMV5jakdvOezVGMzkyWcJbo"
         alt="Mãos segurando um cérebro de plástico, simbolizando psicologia e saúde mental"
         loading="lazy"
@@ -401,10 +474,11 @@
     <div class="text">
       <h2>Quem sou eu?</h2>
       <p>
-        Sou Psicólogo e Neuropsicólogo com atuação em Terapia Cognitivo-Comportamental. Formado pela PUCRS e pós-graduado em Neuropsicologia pela Anhembi Morumbi.
+        Sou Psicólogo e Neuropsicólogo com atuação em Terapia Cognitivo-Comportamental. Estou em constante aprimoramento profissional, mantendo meu compromisso com a excelência clínica e com o cuidado integral à pessoa, promovendo intervenções que favoreçam o autoconhecimento, a autorregulação emocional e a qualidade de vida.
       </p>
       <p>
-        Tenho paixão por ajudar pessoas a se reconectarem com sua saúde mental de forma ética, empática e baseada em evidências.
+
+Minha trajetória é pautada por ética, responsabilidade técnica e escuta qualificada, buscando oferecer um ambiente seguro, acolhedor e livre de julgamentos. Acredito que a psicologia deve ser acessível, atualizada e sensível às complexidades humanas, respeitando a singularidade de cada história.
       </p>
       <div class="contact-buttons">
               <a href="https://wa.me/5513996321749" target="_blank" rel="noopener" class="button" aria-label="Entrar em contato pelo WhatsApp">
@@ -501,7 +575,7 @@ Escuta de Crianças e adolescentes na rede de serviços do SUS</p>
 </h2>
     <p style="font-size: 1.1rem; color: #444; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
 
-     Ambiente climatizado, com café e bebidas à disposição, garantindo o máximo de conforto.
+     Ambiente climatizado, com café e bebidas à disposição, garantindo o máximo de conforto. Todas as salas são pensadas para uma sessão de terapia, com temperatura equilibrada e isolamento acústico para garantir o sígilo.
     </p>
   </section>
 
@@ -565,14 +639,20 @@ Escuta de Crianças e adolescentes na rede de serviços do SUS</p>
 </script>
 
 
-
-<!-- CTA -->
-<section id="cta" style="background-color: white; padding: 60px 20px; text-align: center;">
+<!-- CTA DESTACADO -->
+<section id="cta" style="background-color: #f0f9ff; padding: 80px 20px; text-align: center; border-radius: 20px; box-shadow: 0 10px 30px rgba(11,29,81,0.1); margin: 100px auto; max-width: 1000px; animation: fadeInUp 1s ease forwards;">
   <div class="cta-container">
-    <h2 style="color: #247BA0; font-size: 2.2rem; font-weight: bold;">Pronto para transformar sua saúde mental?</h2>
-    <p style="color: #444; font-size: 1.2rem; margin-bottom: 5px;">Agende sua consulta e dê o primeiro passo para uma vida mais equilibrada e feliz.</p>
-    <a href="https://wa.me/5513996321749" target="_blank" class="cta-button" style="background-color: #247BA0; color: white; padding: 16px 32px; font-size: 1.1rem; border-radius: 6px; text-decoration: none; display: inline-block; transition: background-color 0.3s ease, transform 0.3s ease;">
-      Agendar via WhatsApp
+    <h2 style="color: #0b1d51; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">
+      🌟 Pronto para transformar sua saúde mental?
+    </h2>
+    <p style="color: #333; font-size: 1.3rem; margin-bottom: 40px;">
+      ✨ Agende sua consulta e dê o primeiro passo para uma vida mais equilibrada e feliz. 🌱💬
+    </p>
+    <a href="https://wa.me/5513996321749" target="_blank" class="cta-button"
+       style="background-color: #247BA0; color: white; padding: 18px 36px; font-size: 1.2rem; font-weight: bold;
+              border-radius: 10px; text-decoration: none; display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease;
+              animation: pulse 2s infinite; box-shadow: 0 8px 20px rgba(36,123,160,0.3);">
+      💬 Agendar via WhatsApp
     </a>
   </div>
 </section>
