@@ -24,7 +24,7 @@
       -moz-osx-font-smoothing: grayscale;
     }
     header {
-      background-color: #0b1d51; /* azul marinho escuro */
+      background-color: #247BA0; /* azul marinho escuro */
       color: #fff;
       padding: 60px 20px;
       text-align: center;
@@ -51,11 +51,11 @@
       padding: 0 20px;
     }
     h2 {
-      color: #0b1d51;
+      color: #247BA0;
       font-weight: 700;
       font-size: 2.25rem;
       margin-bottom: 30px;
-      border-bottom: 3px solid #0b1d51;
+      border-bottom: 3px solid #247BA0;
       padding-bottom: 10px;
       letter-spacing: 0.05em;
     }
@@ -63,7 +63,7 @@
       font-weight: 600;
       font-size: 1.3rem;
       margin-bottom: 12px;
-      color: #0b1d51;
+      color: #247BA0;
     }
     p {
       font-weight: 400;
@@ -73,7 +73,7 @@
     }
     a.button {
       display: inline-block;
-      background-color: #0b1d51;
+      background-color: #247BA0;
       color: #fff;
       padding: 14px 36px;
       border-radius: 8px;
@@ -118,7 +118,7 @@
       height: 320px;
       object-fit: cover;
       border-radius: 50%;
-      border: 5px solid #0b1d51;
+      border: 5px solid #247BA0;
       box-shadow: 0 8px 20px rgba(11,29,81,0.2);
       transition: transform 0.3s ease;
     }
@@ -132,7 +132,7 @@
 
     /* CTA */
     #cta {
-      background-color: #0b1d51;
+      background-color: #247BA0;
       color: #fff;
       text-align: center;
       padding: 60px 20px;
@@ -193,7 +193,7 @@
     #servicos .cards > div h3 {
       margin-bottom: 15px;
       font-size: 1.5rem;
-      color: #0b1d51;
+      color: #247BA0;
       user-select: text;
     }
     #servicos .cards > div p {
@@ -205,7 +205,7 @@
     /* Ícones serviços */
     .icon {
       font-size: 36px;
-      color: #0b1d51;
+      color: #247BA0;
       margin-bottom: 15px;
       display: inline-block;
     }
@@ -240,10 +240,10 @@
     }
     #duvidas-frequentes h2 {
       width: 100%;
-      color: #0b1d51;
+      color: #247BA0;
       font-weight: 700;
       font-size: 2rem;
-      border-bottom: 3px solid #0b1d51;
+      border-bottom: 3px solid #247BA0;
       padding-bottom: 8px;
       margin-bottom: 30px;
       letter-spacing: 0.05em;
@@ -255,7 +255,7 @@
       gap: 14px;
     }
     #faq-menu button {
-      background-color: #0b1d51;
+      background-color: #247BA0;
       color: #fff;
       border: none;
       padding: 14px 20px;
@@ -296,7 +296,7 @@
 
     /* Rodapé */
     footer {
-      background-color: #0b1d51;
+      background-color: #247BA0;
       color: #cfd8dc;
       text-align: center;
       padding: 30px 20px;
@@ -311,11 +311,11 @@
       padding: 0 20px;
     }
     #certificacoes h2 {
-      color: #0b1d51;
+      color: #247BA0;
       font-weight: 700;
       font-size: 2.25rem;
       margin-bottom: 40px;
-      border-bottom: 3px solid #0b1d51;
+      border-bottom: 3px solid #247BA0;
       padding-bottom: 12px;
       letter-spacing: 0.05em;
       text-align: center;
@@ -478,30 +478,133 @@ Escuta de Crianças e adolescentes na rede de serviços do SUS</p>
     </div>
   </section>
 
-  <section id="localizacao" aria-label="Localização do consultório">
-    <h2>Localização</h2>
-    <p>Avenida Ana Costa, 228 - Gonzaga, Santos - SP, 11070-000, Brasil</p>
+
+<!-- Container flex para as duas seções -->
+<div style="display: flex; justify-content: center; gap: 40px; max-width: 1200px; margin: 80px auto; padding: 0 20px; flex-wrap: wrap;">
+
+  <!-- Carrossel de Fotos do Consultório -->
+  <section id="consultorio-fotos" 
+    style="flex: 1 1 400px; max-width: 500px; padding: 30px 20px; text-align: center; 
+           background-color: #f7faff; border-radius: 16px; box-shadow: 0 6px 18px rgba(11,29,81,0.07);">
+    <h2 style="color: #247BA0; font-weight: 300; font-size: 2.25rem; margin-bottom: 40px; 
+               border-bottom: 3px solid #247BA0; padding-bottom: 12px; letter-spacing: 0.05em;">
+      Conheça o Consultório
+    </h2>
+    <div class="carousel" style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 6px 18px rgba(11,29,81,0.1); max-width: 100%; height: 320px;">
+      <img src="https://psimatheusshibu.com/wp-content/uploads/2025/06/Design-sem-nome-51-768x768.webp" alt="Foto 1 do consultório" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" class="carousel-image active">
+      <img src="https://psimatheusshibu.com/wp-content/uploads/2025/06/Design-sem-nome-50-1-768x768.webp" alt="Foto 2 do consultório" style="width: 100%; height: 100%; object-fit: cover; display: none;" loading="lazy" class="carousel-image">
+      <img src="https://images.prismic.io/livance-domus/ZyP2sK8jQArT0GXY_sala_psico_vmd.png?auto=format,compress" alt="Foto 3 do consultório" style="width: 100%; height: 100%; object-fit: cover; display: none;" loading="lazy" class="carousel-image">
+      
+      <button class="prev" aria-label="Imagem anterior" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: #247BA0; color: white; border: none; padding: 10px 10px; cursor: pointer; border-radius: 50%; font-size: 20px; user-select: none;">&#10094;</button>
+      <button class="next" aria-label="Próxima imagem" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: #247BA0; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 20px; user-select: none;">&#10095;</button>
+    </div>
+</h2>
+    <p style="font-size: 1.1rem; color: #444; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+
+     Ambiente climatizado, com café e bebidas à disposição, garantindo o máximo de conforto.
+    </p>
+  </section>
+
+  <!-- Localização do Consultório -->
+  <section id="localizacao" aria-label="Localização do consultório" 
+    style="flex: 1 1 400px; max-width: 500px; padding: 30px 20px; text-align: center; 
+           background-color: #f7faff; border-radius: 16px; box-shadow: 0 6px 18px rgba(11,29,81,0.07);">
+    <h2 style="color: #247BA0; font-weight: 700; font-size: 2.25rem; margin-bottom: 20px; 
+               border-bottom: 3px solid #247BA0; padding-bottom: 10px; letter-spacing: 0.05em;">
+
+      Localização
+    </h2>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.892290095031!2d-46.32749448507144!3d-23.962302484536118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce05f90094a9b5%3A0x88276b8cae0ae6a7!2sAvenida%20Ana%20Costa%2C%20228%20-%20Gonzaga%2C%20Santos%20-%20SP%2C%2011070-000!5e0!3m2!1spt-BR!2sbr!4v1699634981234!5m2!1spt-BR!2sbr"
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
       aria-label="Mapa do endereço do consultório"
-    ></iframe>
+      style="width: 100%; height: 400px; border-radius: 12px; box-shadow: 0 6px 18px rgba(11,29,81,0.15); border: none;">
+    </iframe>
+
+    <p style="font-size: 1.1rem; color: #444; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Avenida Ana Costa, 228 - Gonzaga, Santos - SP, 11070-000, Brasil
+    </p>
   </section>
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.carousel-image');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+      }
+      showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex++;
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+      showImage(currentIndex);
+    });
+
+    // Inicializa mostrando a primeira imagem
+    showImage(currentIndex);
+  });
+</script>
+
+
 
 <!-- CTA -->
 <section id="cta" style="background-color: white; padding: 60px 20px; text-align: center;">
   <div class="cta-container">
-    <h2 style="color: #0b1d51; font-size: 2.2rem; font-weight: bold;">Pronto para transformar sua saúde mental?</h2>
-    <p style="color: #444; font-size: 1.2rem; margin-bottom: 25px;">Agende sua consulta e dê o primeiro passo para uma vida mais equilibrada e feliz.</p>
-    <a href="https://wa.me/5513996321749" target="_blank" class="cta-button" style="background-color: #0b1d51; color: white; padding: 16px 32px; font-size: 1.1rem; border-radius: 6px; text-decoration: none; display: inline-block; transition: background-color 0.3s ease, transform 0.3s ease;">
+    <h2 style="color: #247BA0; font-size: 2.2rem; font-weight: bold;">Pronto para transformar sua saúde mental?</h2>
+    <p style="color: #444; font-size: 1.2rem; margin-bottom: 5px;">Agende sua consulta e dê o primeiro passo para uma vida mais equilibrada e feliz.</p>
+    <a href="https://wa.me/5513996321749" target="_blank" class="cta-button" style="background-color: #247BA0; color: white; padding: 16px 32px; font-size: 1.1rem; border-radius: 6px; text-decoration: none; display: inline-block; transition: background-color 0.3s ease, transform 0.3s ease;">
       Agendar via WhatsApp
     </a>
   </div>
 </section>
 
+<!-- Seção Doctoralia -->
+<section id="doctoralia" style="text-align: center; padding: 40px 20px;">
+  <h2 style="color: #247BA0; font-size: 2rem; margin-bottom: 20px;">Agende sua consulta pelo Doctoralia</h2>
 
+  <a id="zl-url" class="zl-url"
+     href="https://www.doctoralia.com.br/wallace-souza-caldas/psicologo/santos"
+     rel="nofollow"
+     data-zlw-doctor="wallace-souza-caldas"
+     data-zlw-type="big"
+     data-zlw-opinion="false"
+     data-zlw-hide-branding="true"
+     data-zlw-saas-only="true"
+     data-zlw-a11y-title="Widget de marcação de consultas médicas">
+    Wallace Souza Caldas - Doctoralia.com.br
+  </a>
+
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.docplanner.com/js/widget.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    }(document, "script", "zl-widget-s"));
+  </script>
+</section>
   <section id="duvidas-frequentes" aria-label="Dúvidas frequentes">
     <h2>Dúvidas Frequentes</h2>
     <div id="faq-menu" role="list">
