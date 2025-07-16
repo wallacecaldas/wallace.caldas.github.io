@@ -574,39 +574,38 @@ header .topo h1 {
     Às vezes, a vida pesa. E tudo bem não estar bem o tempo todo. Aqui estão algumas situações em que posso te ajudar por meio da psicologia:
   </p>
 
-  <div style="display: flex; flex-direction: column; gap: 25px;">
-    <div class="ajuda-item">
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+    <div class="ajuda-item" style="flex: 1 1 45%; min-width: 280px;">
       <h3 style="color: #305d8c;">🧠 Dificuldade em lidar com pensamentos e emoções</h3>
       <p style="color: #444;">Você sente que sua mente não desacelera? Sofre com ansiedade, tristeza profunda ou irritação constante? A psicoterapia pode te ajudar a compreender seus sentimentos e encontrar equilíbrio emocional.</p>
     </div>
 
-    <div class="ajuda-item">
+    <div class="ajuda-item" style="flex: 1 1 45%; min-width: 280px;">
       <h3 style="color: #305d8c;">👪 Desafios nos relacionamentos</h3>
       <p style="color: #444;">Conflitos frequentes com parceiro(a), família ou amigos? A terapia oferece um espaço seguro para desenvolver comunicação assertiva e lidar com padrões que se repetem.</p>
     </div>
 
-    <div class="ajuda-item">
+    <div class="ajuda-item" style="flex: 1 1 45%; min-width: 280px;">
       <h3 style="color: #305d8c;">👶 Comportamentos difíceis na infância ou adolescência</h3>
       <p style="color: #444;">Se seu filho apresenta agitação, dificuldade de atenção, agressividade ou isolamento, a avaliação psicológica e o acompanhamento terapêutico podem oferecer caminhos de cuidado e orientação.</p>
     </div>
 
-    <div class="ajuda-item">
+    <div class="ajuda-item" style="flex: 1 1 45%; min-width: 280px;">
       <h3 style="color: #305d8c;">💼 Estresse no trabalho ou esgotamento</h3>
       <p style="color: #444;">Você está sobrecarregado(a), com queda de desempenho ou pensando em desistir de tudo? A psicologia pode ajudar a entender os limites e desenvolver estratégias para lidar com a pressão do dia a dia.</p>
     </div>
 
-    <div class="ajuda-item">
+    <div class="ajuda-item" style="flex: 1 1 45%; min-width: 280px;">
       <h3 style="color: #305d8c;">🌀 Fases difíceis, perdas ou mudanças</h3>
       <p style="color: #444;">Vivenciar um luto, fim de relacionamento ou mudança brusca pode abalar nosso equilíbrio. A psicoterapia oferece suporte emocional para atravessar essas transições com mais segurança.</p>
     </div>
 
-    <div class="ajuda-item">
+    <div class="ajuda-item" style="flex: 1 1 45%; min-width: 280px;">
       <h3 style="color: #305d8c;">🔍 Desejo de autoconhecimento</h3>
       <p style="color: #444;">Mesmo sem uma “grande crise”, muitas pessoas buscam a terapia para se conhecer melhor, melhorar sua autoestima, tomar decisões e viver com mais autenticidade.</p>
     </div>
   </div>
 </section>
-
 <style>
   .ajuda-item {
     background: white;
@@ -622,6 +621,37 @@ header .topo h1 {
     cursor: pointer;
   }
 </style>
+<!-- CTA DESTACADO -->
+<section id="cta" style="background-color: #f0f9ff; padding: 80px 20px; text-align: center; border-radius: 20px; box-shadow: 0 10px 30px rgba(11,29,81,0.1); margin: 100px auto; max-width: 1000px; animation: fadeInUp 1s ease forwards;">
+  <div class="cta-container">
+    <h2 style="color: #0b1d51; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">
+      🌟 Pronto para transformar sua saúde mental?
+    </h2>
+    <p style="color: #333; font-size: 1.3rem; margin-bottom: 40px;">
+      ✨ Agende sua consulta e dê o primeiro passo para uma vida mais equilibrada e feliz. 🌱💬
+    </p>
+    <a href="https://wa.me/5513996321749" target="_blank" class="cta-button"
+       style="background-color: #247BA0; color: white; padding: 18px 36px; font-size: 1.2rem; font-weight: bold;
+              border-radius: 10px; text-decoration: none; display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease;
+              animation: pulse 2s infinite; box-shadow: 0 8px 20px rgba(36,123,160,0.3);">
+      💬 Agendar via WhatsApp
+    </a>
+  </div>
+</section>
+
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.docplanner.com/js/widget.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    }(document, "script", "zl-widget-s"));
+  </script>
+
+
 <!-- Certificações -->
 <section id="certificacoes" aria-label="Certificações, Títulos e Prêmios" style="max-width: 1100px; margin: 60px auto; padding: 20px;">
   <h2 style="text-align: center; color: #305d8c; margin-bottom: 30px;">Certificações</h2>
@@ -660,6 +690,8 @@ header .topo h1 {
   </div>
 </section>
 
+
+
 </section>
 
   <section id="servicos">
@@ -682,62 +714,6 @@ header .topo h1 {
       </div>
     </div>
   </section>
-
-<section id="explicacao-metodos" style="max-width: 900px; margin: 80px auto; padding: 25px 30px; background-color: #f0f7fc; border-radius: 15px; box-shadow: 0 6px 16px rgba(20, 52, 94, 0.12); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-  <h2 style="color: #1e3a5f; font-weight: 700; font-size: 2.1rem; margin-bottom: 30px; text-align: center; letter-spacing: 0.05em;">
-   🧠 O que é Neuropsicologia  e Terapia Cognitivo-Comportamental? 💡
-  </h2>
-
-  <div class="accordion-item" style="margin-bottom: 20px; border-bottom: 1px solid #d4d9e2;">
-    <button class="accordion-button" aria-expanded="false" style="all:unset; cursor:pointer; display:flex; justify-content:space-between; width: 100%; padding: 15px 10px; font-size: 1.4rem; font-weight: 600; color: #2a4d7d;">
-      Neuropsicologia: Entendendo o funcionamento do cérebro
-      <span class="accordion-icon" style="font-weight: 700; font-size: 1.4rem; transition: transform 0.3s ease;">+</span>
-    </button>
-    <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; color: #34495e; font-size: 1.15rem; line-height: 1.8; padding: 0 10px;">
-      <p>A Neuropsicologia é uma área da psicologia que estuda como o nosso cérebro influencia o jeito que pensamos, sentimos e nos comportamos no dia a dia. Imagine o cérebro como uma central que controla tudo: a memória, a atenção, o raciocínio, o humor e até os movimentos do corpo.</p>
-      <p>Às vezes, por causa de algum problema — como uma lesão, uma doença, estresse intenso, ou até o envelhecimento natural — essa “central” pode funcionar de forma diferente, causando dificuldades em lembrar coisas, prestar atenção, controlar emoções ou até mesmo falar e se organizar.</p>
-      <p>O neuropsicólogo realiza avaliações específicas para entender quais funções do cérebro estão mais afetadas e assim pode indicar o melhor caminho para ajudar a pessoa a melhorar sua qualidade de vida.</p>
-    </div>
-  </div>
-
-  <div class="accordion-item" style="margin-bottom: 20px; border-bottom: 1px solid #d4d9e2;">
-    <button class="accordion-button" aria-expanded="false" style="all:unset; cursor:pointer; display:flex; justify-content:space-between; width: 100%; padding: 15px 10px; font-size: 1.4rem; font-weight: 600; color: #2a4d7d;">
-      Terapia Cognitivo-Comportamental (TCC): Mudando pensamentos para transformar a vida
-      <span class="accordion-icon" style="font-weight: 700; font-size: 1.4rem; transition: transform 0.3s ease;">+</span>
-    </button>
-    <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; color: #34495e; font-size: 1.15rem; line-height: 1.8; padding: 0 10px;">
-      <p>A Terapia Cognitivo-Comportamental, conhecida como TCC, é uma abordagem prática que ajuda a pessoa a entender a ligação entre seus pensamentos, sentimentos e comportamentos. Muitas vezes, nossos pensamentos podem criar problemas sem a gente perceber — por exemplo, pensar “eu nunca consigo fazer nada direito” pode causar tristeza e desânimo, e fazer a pessoa evitar situações importantes.</p>
-      <p>Na TCC, o terapeuta ensina técnicas para identificar esses pensamentos negativos e substituí-los por formas de pensar mais realistas e positivas. Também ajuda a desenvolver comportamentos que tragam mais bem-estar, como enfrentar medos, melhorar a comunicação e cuidar melhor de si mesmo.</p>
-      <p>Essa terapia é muito eficaz para tratar ansiedade, depressão, estresse, problemas de autoestima, entre outras questões. Ela foca no presente e no que pode ser feito para melhorar a vida da pessoa agora, com exercícios práticos e acompanhamento.</p>
-    </div>
-  </div>
-</section>
-
-<script>
-  document.querySelectorAll('.accordion-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const expanded = button.getAttribute('aria-expanded') === 'true';
-      const content = button.nextElementSibling;
-
-      if (expanded) {
-        // fechar
-        button.setAttribute('aria-expanded', 'false');
-        content.style.maxHeight = '0';
-        content.style.paddingTop = '0';
-        content.style.paddingBottom = '0';
-        button.querySelector('.accordion-icon').textContent = '+';
-      } else {
-        // abrir
-        button.setAttribute('aria-expanded', 'true');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.paddingTop = '10px';
-        content.style.paddingBottom = '10px';
-        button.querySelector('.accordion-icon').textContent = '−';
-      }
-    });
-  });
-</script>
-
 
 
 <!-- Container flex para as duas seções -->
@@ -824,87 +800,95 @@ header .topo h1 {
     showImage(currentIndex);
   });
 </script>
+<section id="explicacao-e-faq" style="max-width: 1000px; margin: 80px auto; padding: 30px; background-color: #f0f7fc; border-radius: 15px; box-shadow: 0 6px 16px rgba(20, 52, 94, 0.12); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
 
+  <h2 style="color: #1e3a5f; font-weight: 700; font-size: 2.1rem; margin-bottom: 40px; text-align: center; letter-spacing: 0.05em;">
+    🧠 Neuropsicologia, TCC e Dúvidas Frequentes 💬
+  </h2>
 
-<!-- CTA DESTACADO -->
-<section id="cta" style="background-color: #f0f9ff; padding: 80px 20px; text-align: center; border-radius: 20px; box-shadow: 0 10px 30px rgba(11,29,81,0.1); margin: 100px auto; max-width: 1000px; animation: fadeInUp 1s ease forwards;">
-  <div class="cta-container">
-    <h2 style="color: #0b1d51; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">
-      🌟 Pronto para transformar sua saúde mental?
-    </h2>
-    <p style="color: #333; font-size: 1.3rem; margin-bottom: 40px;">
-      ✨ Agende sua consulta e dê o primeiro passo para uma vida mais equilibrada e feliz. 🌱💬
-    </p>
-    <a href="https://wa.me/5513996321749" target="_blank" class="cta-button"
-       style="background-color: #247BA0; color: white; padding: 18px 36px; font-size: 1.2rem; font-weight: bold;
-              border-radius: 10px; text-decoration: none; display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease;
-              animation: pulse 2s infinite; box-shadow: 0 8px 20px rgba(36,123,160,0.3);">
-      💬 Agendar via WhatsApp
-    </a>
+  <!-- Acordeões Explicativos -->
+  <div class="accordion-item" style="margin-bottom: 20px; border-bottom: 1px solid #d4d9e2;">
+    <button class="accordion-button" aria-expanded="false" style="all:unset; cursor:pointer; display:flex; justify-content:space-between; width: 100%; padding: 15px 10px; font-size: 1.4rem; font-weight: 600; color: #2a4d7d;">
+      Neuropsicologia: Entendendo o funcionamento do cérebro
+      <span class="accordion-icon" style="font-weight: 700; font-size: 1.4rem;">+</span>
+    </button>
+    <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; color: #34495e; font-size: 1.15rem; line-height: 1.8; padding: 0 10px;">
+      <p>A Neuropsicologia é uma área da psicologia que estuda como o nosso cérebro influencia o jeito que pensamos, sentimos e nos comportamos no dia a dia.</p>
+      <p>Imagine o cérebro como uma central que controla tudo: memória, atenção, raciocínio, humor e até movimentos do corpo. Quando algo afeta essa central — como uma lesão, doença, estresse ou envelhecimento — podemos ter dificuldades para lembrar, focar, se organizar ou lidar com emoções.</p>
+      <p>O neuropsicólogo realiza avaliações específicas para identificar quais funções estão comprometidas e propõe formas de melhorar a qualidade de vida do paciente.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item" style="margin-bottom: 40px; border-bottom: 1px solid #d4d9e2;">
+    <button class="accordion-button" aria-expanded="false" style="all:unset; cursor:pointer; display:flex; justify-content:space-between; width: 100%; padding: 15px 10px; font-size: 1.4rem; font-weight: 600; color: #2a4d7d;">
+      Terapia Cognitivo-Comportamental (TCC): Mudando pensamentos para transformar a vida
+      <span class="accordion-icon" style="font-weight: 700; font-size: 1.4rem;">+</span>
+    </button>
+    <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; color: #34495e; font-size: 1.15rem; line-height: 1.8; padding: 0 10px;">
+      <p>A TCC é uma abordagem prática que ajuda você a entender a ligação entre seus pensamentos, sentimentos e comportamentos.</p>
+      <p>Por exemplo, pensar “eu não sirvo pra nada” pode gerar tristeza e te afastar de oportunidades. Na TCC, você aprende a identificar esses pensamentos negativos e substituí-los por versões mais realistas e saudáveis.</p>
+      <p>É indicada para ansiedade, depressão, estresse, autoestima e muito mais. O foco está no presente e no que pode ser feito para melhorar sua vida hoje.</p>
+    </div>
+  </div>
+
+  <!-- Dúvidas Frequentes -->
+  <h3 style="color: #1e3a5f; font-size: 1.6rem; margin-top: 40px; margin-bottom: 20px;"> Dúvidas Frequentes❓</h3>
+
+  <div id="faq-menu" role="list" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
+    <button class="faq-btn active" type="button" aria-selected="true" aria-controls="faq-resposta" id="faq1" style="flex: 1 1 45%; min-width: 220px;">Quanto tempo dura cada sessão?</button>
+    <button class="faq-btn" type="button" aria-selected="false" id="faq2">Quanto tempo de terapia é necessário?</button>
+    <button class="faq-btn" type="button" aria-selected="false" id="faq3">Quais as modalidades de pagamento?</button>
+    <button class="faq-btn" type="button" aria-selected="false" id="faq4">Posso fazer sessões eventuais?</button>
+    <button class="faq-btn" type="button" aria-selected="false" id="faq5">O que é preciso para sessões online?</button>
+    <button class="faq-btn" type="button" aria-selected="false" id="faq6">Qual aplicativo é usado nas sessões?</button>
+  </div>
+
+  <div id="faq-resposta" tabindex="0" aria-live="polite" style="font-size: 1.1rem; color: #333; background: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+    <p>Cada sessão tem duração média de 50 minutos, que é o padrão para terapia psicológica.</p>
   </div>
 </section>
 
-  <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.docplanner.com/js/widget.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }
-    }(document, "script", "zl-widget-s"));
-  </script>
+<script>
+  // Acordeão
+  document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const expanded = button.getAttribute('aria-expanded') === 'true';
 
-
-
-</section>
-  <section id="duvidas-frequentes" aria-label="Dúvidas frequentes">
-    <h2>Dúvidas Frequentes</h2>
-    <div id="faq-menu" role="list">
-      <button class="active" type="button" aria-selected="true" aria-controls="faq-resposta" id="faq1">Quanto tempo dura cada sessão?</button>
-      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq2">Quanto tempo de terapia é necessário?</button>
-      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq3">Quais as modalidades de pagamento?</button>
-      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq4">Posso fazer sessões eventuais?</button>
-      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq5">O que é preciso para realizar sessões online?</button>
-      <button type="button" aria-selected="false" aria-controls="faq-resposta" id="faq6">Qual aplicativo é utilizado para a sessão online?</button>
-    </div>
-    <div id="faq-resposta" tabindex="0" aria-live="polite">
-      <p>Cada sessão tem duração média de 50 minutos, que é o padrão para terapia psicológica.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Wallace Souza Caldas - Psicólogo | CRP 06/208027</p>
-  </footer>
-
-  <script>
-    // FAQ interativo simples
-    const faqButtons = document.querySelectorAll('#faq-menu button');
-    const faqResposta = document.getElementById('faq-resposta');
-
-    const respostas = {
-      faq1: 'Cada sessão tem duração média de 50 minutos, que é o padrão para terapia psicológica.',
-      faq2: 'A duração da terapia varia conforme a necessidade do paciente, podendo durar alguns meses ou anos.',
-      faq3: 'Aceitamos pagamentos via PIX, cartão de crédito, débito e boleto bancário.',
-      faq4: 'Sim, sessões eventuais são possíveis, mas o acompanhamento regular é mais eficaz para resultados.',
-      faq5: 'É necessário ter um ambiente reservado, internet estável e dispositivo com câmera e microfone.',
-      faq6: 'Utilizamos aplicativos como Zoom, Google Meet ou Microsoft Teams, conforme a preferência do paciente.'
-    };
-
-    faqButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        faqButtons.forEach(b => {
-          b.classList.remove('active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
-        faqResposta.innerHTML = '<p>' + respostas[btn.id] + '</p>';
-        faqResposta.focus();
-      });
+      button.setAttribute('aria-expanded', !expanded);
+      content.style.maxHeight = expanded ? '0' : content.scrollHeight + 'px';
+      content.style.paddingTop = expanded ? '0' : '10px';
+      content.style.paddingBottom = expanded ? '0' : '10px';
+      button.querySelector('.accordion-icon').textContent = expanded ? '+' : '−';
     });
-  </script>
+  });
+
+  // FAQ
+  const faqButtons = document.querySelectorAll('#faq-menu button');
+  const faqResposta = document.getElementById('faq-resposta');
+
+  const respostas = {
+    faq1: 'Cada sessão tem duração média de 50 minutos, que é o padrão para terapia psicológica.',
+    faq2: 'A duração da terapia varia conforme a necessidade do paciente, podendo durar alguns meses ou anos.',
+    faq3: 'Aceitamos pagamentos via PIX, cartão de crédito, débito e boleto bancário.',
+    faq4: 'Sim, sessões eventuais são possíveis, mas o acompanhamento regular é mais eficaz para resultados.',
+    faq5: 'É necessário ter um ambiente reservado, internet estável e dispositivo com câmera e microfone.',
+    faq6: 'Utilizamos aplicativos como Zoom, Google Meet ou Microsoft Teams, conforme a preferência do paciente.'
+  };
+
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      faqButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      faqResposta.innerHTML = '<p>' + respostas[btn.id] + '</p>';
+      faqResposta.focus();
+    });
+  });
+</script>
 
 
 </body>
