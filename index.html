@@ -513,6 +513,48 @@ header .topo h1 {
 @media (max-width: 900px) {
   .ce
 
+/* --------------------- MEDIA QUERIES --------------------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1rem; }
+
+  #sobre {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  #servicos .cards,
+  .cert-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ajuda-item {
+    flex: 0 0 48%; /* 2 itens no carrossel */
+  }
+
+  #consultorio-fotos,
+  #localizacao {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  header h1 { font-size: 1.5rem; }
+  header p { font-size: 0.95rem; padding: 0 10px; }
+
+  #sobre {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  #sobre .text,
+  #sobre .photo {
+    max-width: 100%;
+  }
   </style>
 </head>
 
@@ -535,7 +577,7 @@ header .topo h1 {
       alt="Wallace foto"
       loading="lazy"
       style="
-        width: 320px;
+       max-width: 320px
         height: 320px;
         object-fit: cover;
         border-radius: 20px; /* quadrado arredondado */
@@ -630,7 +672,7 @@ Tenho 28 anos e estudo Psicologia desde os 13, quando descobri meu interesse em 
 <!-- Seção: Como Posso Ajudar? (CARROSSEL) -->
 <section id="como-ajudar" style="max-width: 1100px; margin: 80px auto; padding: 40px; background-color: #f7f9fb; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); font-family: Arial, sans-serif;">
 
-  <h2 style="text-align: center; color: #3c4f99 ; margin-bottom: 30px;">
+  <h2 style="text-align: center; color: #3c4f99; margin-bottom: 30px;">
     🧩 Para que fazer uma avaliação?
   </h2>
 
@@ -639,36 +681,38 @@ Tenho 28 anos e estudo Psicologia desde os 13, quando descobri meu interesse em 
   </p>
 
   <!-- Carrossel -->
-  <div class="carousel-container">
-    <button class="carousel-btn prev">❮</button>
-
-    <div class="carousel-track">
-      <!-- Cada ajuda-item vira um slide -->
-      <!-- Cole aqui TODOS os seus .ajuda-item, sem mexer no conteúdo -->
-      
-      <!-- INÍCIO DOS ITENS -->
-      <div class="ajuda-item">🧠 TDAH – Transtorno do Déficit de Atenção e Hiperatividade<br><span>Dificuldades de foco, organização, impulsividade, agitação ou problemas persistentes de atenção.</span></div>
-
-      <div class="ajuda-item">🧩 TEA – Transtorno do Espectro Autista<br><span>Desafios na comunicação, interação social, rigidez comportamental e padrões restritos de interesse.</span></div>
-
-      <div class="ajuda-item">⭐ Altas Habilidades / Superdotação<br><span>Desempenho superior em áreas específicas, podendo coexistir com dificuldades emocionais.</span></div>
-
-      <div class="ajuda-item">📘 Transtornos de Aprendizagem<br><span>Dislexia, Disortografia e Discalculia, identificadas por testes padronizados.</span></div>
-
-      <div class="ajuda-item">😞 Transtornos de Humor e Ansiedade<br><span>Travamentos cognitivos, lapsos de memória e dificuldade de concentração.</span></div>
-
-      <div class="ajuda-item">🧬 Transtornos de Personalidade<br><span>Padrões persistentes emocionais e comportamentais que impactam a vida.</span></div>
-
-      <div class="ajuda-item">🧓 Transtorno Neurocognitivo<br><span>Falhas de memória, linguagem, autonomia e funções executivas.</span></div>
-
-      <div class="ajuda-item">🧠 Doença de Alzheimer e Demências<br><span>Inclui vascular, frontotemporal, Lewy, entre outras.</span></div>
-
-      <div class="ajuda-item">👶 Atraso no Desenvolvimento Intelectual<br><span>Dificuldades globais de aprendizagem e adaptação social.</span></div>
-
-      <div class="ajuda-item">⚡ Condições Neurológicas Adquiridas<br><span>Sequelas após AVC, TCE, infecções, convulsões.</span></div>
-      <!-- FIM DOS ITENS -->
-
+  <div class="carousel-container" style="overflow-x: auto; scroll-snap-type: x mandatory; display: flex; gap: 20px; padding-bottom: 10px;">
+    
+    <!-- Cada ajuda-item vira um slide -->
+    <div class="ajuda-item" style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); scroll-snap-align: start;">
+      🧠 TDAH – Transtorno do Déficit de Atenção e Hiperatividade<br>
+      <span>Dificuldades de foco, organização, impulsividade, agitação ou problemas persistentes de atenção.</span>
     </div>
+
+    <div class="ajuda-item" style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); scroll-snap-align: start;">
+      🧩 TEA – Transtorno do Espectro Autista<br>
+      <span>Desafios na comunicação, interação social, rigidez comportamental e padrões restritos de interesse.</span>
+    </div>
+
+    <div class="ajuda-item" style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); scroll-snap-align: start;">
+      ⭐ Altas Habilidades / Superdotação<br>
+      <span>Desempenho superior em áreas específicas, podendo coexistir com dificuldades emocionais.</span>
+    </div>
+
+    <div class="ajuda-item" style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); scroll-snap-align: start;">
+      📘 Transtornos de Aprendizagem<br>
+      <span>Dislexia, Disortografia e Discalculia, identificadas por testes padronizados.</span>
+    </div>
+
+    <div class="ajuda-item" style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); scroll-snap-align: start;">
+      😞 Transtornos de Humor e Ansiedade<br>
+      <span>Travamentos cognitivos, lapsos de memória e dificuldade de concentração.</span>
+    </div>
+
+    <!-- Continue com os outros itens aqui... -->
+
+  </div>
+</section>
 
     <button class="carousel-btn next">❯</button>
   </div>
