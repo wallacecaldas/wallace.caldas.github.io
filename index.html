@@ -78,6 +78,17 @@ body::before {
   z-index: -1;
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 }
 @keyframes fadeZoomIn {
@@ -455,6 +466,7 @@ header .topo h1 {
       letter-spacing: 0.05em;
     }/* Seção Certificações – IGUAL à seção Meus Serviços */
 #certificacoes {
+
 <div style="display: flex; justify-content: center; gap: 40px; max-width: 1200px; margin: 80px auto; padding: 0 20px; flex-wrap: wrap;">
 
 }
@@ -562,82 +574,186 @@ header .topo h1 {
 
 <header class="site-header">
  
-  <h1>NEUROPSICÓLOGO EM SANTOS</h1>
+  <h1> NEUROPSICÓLOGO EM SANTOS</h1>
 </header>
 
 
-<section id="sobre" style="max-width: 1100px; margin: 0 auto; padding: 40px 20px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; font-family: Arial, sans-serif;">
+<section id="sobre"
+  style="
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    background-color: #f3f4f9;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(11,29,81,0.1);
+      font-family: 'Bricolage Grotesque', sans-serif;
+  ">
 
   <div class="photo" style="position: relative; flex: 1 1 320px; max-width: 320px; margin: 0 auto;">
-     <!-- FOTO FIXA -->
     <img
       class="foto-perfil"
       src="https://i.imgur.com/uaetXXP.jpeg"
       alt="Wallace foto"
       loading="lazy"
       style="
-       max-width: 320px
+        width: 320px;
         height: 320px;
         object-fit: cover;
-        border-radius: 20px; /* quadrado arredondado */
+        border-radius: 20px;
         border: 5px solid #247BA0;
         box-shadow: 0 8px 20px rgba(11,29,81,0.2);
-     
- Você não precisa dar conta de tudo sozinho.”
-/>
-
-     
-      "></div>
-    </div>
+      "
+    />
   </div>
 
   <div class="text" style="flex: 2 1 600px; max-width: 700px;">
-    <h2 style="color: #3c4f99;"> Wallace Souza Caldas</h2>
-    <p>
-<div style="text-align: justify;">
-     Sou Psicólogo e Neuropsicólogo, com atuação baseada na Terapia Cognitivo-Comportamental (TCC).
-Tenho 28 anos e estudo Psicologia desde os 13 anos de idade, quando descobri meu interesse em compreender o comportamento humano. Acredito que o aprendizado é um processo permanente e libertador, e é por isso que sigo estudando todos os dias, porque sempre há algo novo a descobrir sobre a mente humana.
-    </p>
-    <p>
+    <h2 style="color: #3c4f99;">Wallace Souza Caldas</h2>
+
+    <div style="text-align: justify;">
+      <p>
+        Sou Psicólogo e Neuropsicólogo, com atuação baseada na Terapia Cognitivo-Comportamental (TCC).
+        Tenho 28 anos e estudo Psicologia desde os 13 anos de idade, quando descobri meu interesse em compreender
+        o comportamento humano. Acredito que o aprendizado é um processo permanente e libertador, e é por isso
+        que sigo estudando todos os dias, porque sempre há algo novo a descobrir sobre a mente humana.
+      </p>
+    </div>
+  </div>
+
 </section>
 <!-- Certificações -->
-<section id="certificacoes" aria-label="Certificações, Títulos e Prêmios" style="max-width: 1100px; margin: 60px auto; padding: 20px;">
-  <h2 style="text-align: center; color: #3c4f99 ; margin-bottom: 30px;">Certificações</h2>
-  <div class="cert-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+<section id="certificacoes"
+  aria-label="Certificações, Títulos e Prêmios"
+  style="
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 60px 20px;
+    background-color: #f3f4f9;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(11,29,81,0.1);
+  ">
 
-    <div class="cert-card" style="background: white; padding: 16px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;">
-      <img src="https://portal.pucrs.br/wp-content/uploads/2024/03/logo_pucrs.png" alt="Logo PUCRS" loading="lazy" style="max-width: 140px; margin-bottom: 12px;" />
+  <h2 style="text-align: center; color: #3c4f99; margin-bottom: 30px;">
+    Certificações
+  </h2>
+
+  <div class="cert-cards"
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      justify-items: center;
+    ">
+
+    <div class="cert-card"
+      style="
+        background: transparent;        
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+      ">
+      <img src="https://portal.pucrs.br/wp-content/uploads/2024/03/logo_pucrs.png"
+           alt="Logo PUCRS"
+           loading="lazy"
+           style="max-width: 140px; margin-bottom: 12px;" />
       <p>Especialista em Terapia Cognitivo-Comportamental pela PUCRS</p>
     </div>
 
-    <div class="cert-card" style="background: white; padding: 16px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;">
-      <img src="https://storage.builderall.com//franquias/2/6458452/editor-html/8370742.png" alt="Logo Anhembi Morumbi" loading="lazy" style="max-width: 140px; margin-bottom: 12px;" />
-      <p>Especialista em Neuropsicologia - Avaliação e reabilitação psicológica pela Anhembi Morumbi</p>
+    <div class="cert-card"
+      style="
+                background: transparent;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+      ">
+      <img src="https://storage.builderall.com//franquias/2/6458452/editor-html/8370742.png"
+           alt="Logo Anhembi Morumbi"
+           loading="lazy"
+           style="max-width: 140px; margin-bottom: 12px;" />
+      <p>Especialista em Neuropsicologia – Avaliação e Reabilitação Psicológica pela Anhembi Morumbi</p>
     </div>
 
-    <div class="cert-card" style="background: white; padding: 16px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;">
-      <img src="http://www.crpsp.org/images/logo.png" alt="Conselho Federal de Psicologia" loading="lazy" style="max-width: 140px; margin-bottom: 12px;" />
-      <p>Registro Profissional CRP 06208027</p>
+    <div class="cert-card"
+      style="
+               background: transparent;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+      ">
+      <img src="http://www.crpsp.org/images/logo.png"
+           alt="Conselho Federal de Psicologia"
+           loading="lazy"
+           style="max-width: 140px; margin-bottom: 12px;" />
+      <p>Registro Profissional CRP 06/208027</p>
     </div>
 
-    <div class="cert-card" style="background: white; padding: 16px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;">
-      <img src="https://portal.unimes.br/wp-content/uploads/2021/05/logo-unimes.png" alt="Logo Unimes" loading="lazy" style="max-width: 140px; margin-bottom: 12px;" />
-      <p>Bacharelado em psicologia pela Universidade metroplitana de Santos</p>
+    <div class="cert-card"
+      style="
+        background: transparent;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+      ">
+      <img src="https://portal.unimes.br/wp-content/uploads/2021/05/logo-unimes.png"
+           alt="Logo UNIMES"
+           loading="lazy"
+           style="max-width: 140px; margin-bottom: 12px;" />
+      <p>Bacharelado em Psicologia pela Universidade Metropolitana de Santos</p>
     </div>
 
-    <div class="cert-card" style="background: white; padding: 16px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;">
-      <img src="https://www.gov.br/saude/pt-br/composicao/sectics/plantas-medicinais-e-fitoterapicos/eventos-1/2022/exposicao-15-anos-da-pnpmf-1/logo-fiocruz-1.png/@@images/image.png" alt="UFOP - Fundação oswaldo Cruz" loading="lazy" style="max-width: 140px; margin-bottom: 12px;" />
-      <p>Atenção aos problemas neurológicos frequentes na Atenção Básica</p>
+    <div class="cert-card"
+      style="
+              background: transparent;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+      ">
+      <img src="https://www.gov.br/saude/pt-br/composicao/sectics/plantas-medicinais-e-fitoterapicos/eventos-1/2022/exposicao-15-anos-da-pnpmf-1/logo-fiocruz-1.png/@@images/image.png"
+           alt="Fundação Oswaldo Cruz"
+           loading="lazy"
+           style="max-width: 140px; margin-bottom: 12px;" />
+      <p>Atenção aos Problemas Neurológicos Frequentes na Atenção Básica</p>
     </div>
 
-    <div class="cert-card" style="background: white; padding: 16px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;">
-      <img src="https://logos-world.net/wp-content/uploads/2021/09/MIT-Massachusetts-Institute-of-Technology-Logo.png" alt="UFOP - Cognitive Neuroscience of Remembering: Creating and Controlling Memory" loading="lazy" style="max-width: 140px; margin-bottom: 12px;" />
-      <p>Escuta de Crianças e adolescentes na rede de serviços do SUS</p>
+    <div class="cert-card"
+      style="
+        background: transparent;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+      ">
+      <img src="https://logos-world.net/wp-content/uploads/2021/09/MIT-Massachusetts-Institute-of-Technology-Logo.png"
+           alt="MIT"
+           loading="lazy"
+           style="max-width: 140px; margin-bottom: 12px;" />
+      <p>Escuta de Crianças e Adolescentes na Rede de Serviços do SUS</p>
     </div>
 
   </div>
 </section>
 
+</section>
 </section>
 
 <section id="servicos">
@@ -646,21 +762,21 @@ Tenho 28 anos e estudo Psicologia desde os 13 anos de idade, quando descobri meu
 
 
 <div>
-<span class="icon" aria-hidden="true">💻</span>
+<span class="icon" aria-hidden="true"></span>
 <h3>Avaliação Psicológica para Vasectomia</h3>
 <p>Avaliação essencial para identificar preparo emocional, clareza na decisão e compreensão do procedimento. O processo é sigiloso, ético e garante segurança ao paciente antes da cirurgia.</p>
 </div>
 
 
 <div>
-<span class="icon" aria-hidden="true">🏥</span>
+<span class="icon" aria-hidden="true"></span>
 <h3>Avaliação Psicológica para Bariátrica</h3>
 <p>Análise aprofundada do preparo emocional, motivação e hábitos do paciente. Ajuda a equipe médica e torna o processo cirúrgico mais seguro, consciente e eficaz.</p>
 </div>
 
 
 <div>
-<span class="icon" aria-hidden="true">🧠</span>
+<span class="icon" aria-hidden="true"></span>
 <h3>Avaliação Neuropsicológica</h3>
 <p>Investigação de possíveis transtornos como TDAH, TEA, bipolaridade e alterações cognitivas. Através de entrevistas e testes padronizados, identifica funcionamento cerebral e orienta o tratamento adequado.</p>
 </div>
@@ -787,37 +903,94 @@ Tenho 28 anos e estudo Psicologia desde os 13 anos de idade, quando descobri meu
 
 
 <!-- CTA DESTACADO -->
-<section id="cta" style="background-color: #f3f4f9 ; padding: 80px 20px; text-align: center; border-radius: 20px; box-shadow: 0 10px 30px rgba(11,29,81,0.1); margin: 100px auto; max-width: 1100px; animation: fadeInUp 1s ease forwards;">
+<section id="cta" 
+  style="
+    background-color: #f3f4f9;
+    padding: 90px 20px;
+    text-align: center;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(11,29,81,0.25);
+    margin: 120px auto;
+    max-width: 1100px;
+    ">
 
   <div class="cta-container">
-    <h2 style="color: #3c4f99 ; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">
-       Quero agendar minha avaliação !
-    </h2>
-<p style="color: #333; font-size: 1.3rem; margin-bottom: 40px; text-align: justify;">
-  Ao final das avaliações, você recebe um laudo técnico com os resultados diagnósticos da Avaliação Neuropsicológica, a devolutiva sobre os resultados e, um plano detalhado com orientações personalizadas e baseadas em evidências com os melhores tratamentos terapêuticos indicados para o seu caso.
-</p>
 
-    <a href="https://wa.me/5513996321749" target="_blank" class="cta-button"
-       style="background-color: #247BA0; color: white; padding: 18px 36px; font-size: 1.2rem; font-weight: bold;
-              border-radius: 10px; text-decoration: none; display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease;
-              animation: pulse 2s infinite; box-shadow: 0 8px 20px rgba(36,123,160,0.3);">
-      💬 Agendar
-    </a>
+    <h2 style="
+      color: #3c4f99;
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    ">
+      Agendar Avaliação
+    </h2>
+
+    <p style="
+      color: #4a4a6a;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    ">
+      Entre em contato agora e dê o próximo passo para uma avaliação neuropsicológica completa.
+    </p>
+
+    <!-- BOTÕES -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/5513996321749" target="_blank"
+         style="
+        background-color: #8598f3;
+           color: white;
+           padding: 20px 44px;
+           font-size: 1.2rem;
+           font-weight: bold;
+           border-radius: 14px;
+           text-decoration: none;
+           display: inline-block;
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+           box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+         "
+         onmouseover="this.style.transform='scale(1.08)';"
+         onmouseout="this.style.transform='scale(1)';"
+      >
+         Agendar pelo WhatsApp
+      </a>
+
+      <!-- Doctoralia -->
+      <a href="https://www.doctoralia.com.br/wallace-souza-caldas/psicologo/santos#address-id=1324703&is-online-only=false&filters%5Bdiseases%5D%5B%5D=4586"
+         target="_blank"
+         style="
+           background-color: #3c4f99;
+           color: white;
+           padding: 20px 44px;
+           font-size: 1.2rem;
+           font-weight: bold;
+           border-radius: 14px;
+           text-decoration: none;
+           display: inline-block;
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+           box-shadow: 0 10px 25px rgba(60,79,153,0.35);
+         "
+         onmouseover="this.style.transform='scale(1.06)';"
+         onmouseout="this.style.transform='scale(1)';"
+      >
+         Agendar pelo Doctoralia
+      </a>
+
+    </div>
+
   </div>
 </section>
 
-  <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.docplanner.com/js/widget.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }
-    }(document, "script", "zl-widget-s"));
-  </script>
 
+</section>
 
 
 
@@ -951,7 +1124,7 @@ Tenho 28 anos e estudo Psicologia desde os 13 anos de idade, quando descobri meu
 <section id="explicacao-e-faq" style="max-width: 1100px; margin: 80px auto; padding: 30px; background-color: #fff; border-radius: 15px; box-shadow: 0 6px 16px rgba(20, 52, 94, 0.12); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
 
   <h2 style="color: #3c4f99 ; font-weight: 700; font-size: 2.1rem; margin-bottom: 40px; text-align: center; letter-spacing: 0.05em;">
-    🧠 Dúvidas Frequentes 💬
+     Dúvidas Frequentes 
   </h2>
 
   <!-- Acordeões Explicativos -->
@@ -982,7 +1155,7 @@ Conclusão e parecer: o que o psicólogo concluiu e possíveis encaminhamentos.
 
  
   <!-- Dúvidas Frequentes -->
-  <h3 style="color: #1e3a5f; font-size: 1.6rem; margin-top: 40px; margin-bottom: 20px;"> Dúvidas Frequentes❓</h3>
+  <h3 style="color: #1e3a5f; font-size: 1.6rem; margin-top: 40px; margin-bottom: 20px;"> Dúvidas Frequentes</h3>
 
   <div id="faq-menu" role="list" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
     <button class="faq-btn active" type="button" aria-selected="true" aria-controls="faq-resposta" id="faq1" style="flex: 1 1 45%; min-width: 220px;">Quanto tempo dura cada sessão?</button>
