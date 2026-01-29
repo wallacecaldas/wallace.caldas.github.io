@@ -24,47 +24,99 @@
  
   <style>
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 10px 0;      /* controla a altura */
-  gap: 6px;
-
-  font-size: 12px;
-  color: #666;
-}
-
-.footer img {
-  height: 60px;         /* logo pequeno */
-  width: auto;
-  opacity: 0.85;
-}
-
-.footer p {
-  margin: 0;            /* remove espaço extra */
-}
-
-
-.social-icon {
-    width: 26px;
-    height: auto;
-    transition: transform 0.2s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-}
-
-html, body {
-    font-family: 'Bricolage Grotesque', sans-serif;
-}
-
+  background-color: #3c4f99;
+  color: #f3f4f9;
+  padding: 50px 20px 20px;
+   font-family: 'Bricolage Grotesque', ', sans-serif;
   position: relative;
-  z-index: 0;
 }
 
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 14px;
+  color: #8598f3;
+  text-decoration: none;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons img {
+  width: 26px;
+  height: 26px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* WhatsApp flutuante com texto */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background-color: #25d366;
+  color: #ffffff;
+  text-decoration: none;
+
+  padding: 10px 16px;
+  border-radius: 30px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Hover elegante */
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
 
 body::before {
   content: "";
@@ -229,7 +281,7 @@ header .topo h1 {
       font-weight: 700;
       font-size: 2.25rem;
       margin-bottom: 30px;
-      border-bottom: 3px solid #247BA0;
+      border-bottom: 3px solid #f3f4f9;
       padding-bottom: 10px;
       letter-spacing: 0.05em;
     }
@@ -239,7 +291,7 @@ header .topo h1 {
       font-weight: 600;
       font-size: 1.3rem;
       margin-bottom: 12px;
-      color: #247BA0;
+      color: #f3f4f9;
     }
     p {
       font-weight: 400;
@@ -249,7 +301,7 @@ header .topo h1 {
     }
     a.button {
       display: inline-block;
-      background-color: #247BA0;
+      background-color: #f3f4f9;
       color: #f3f4f9;
       padding: 14px 36px;
       border-radius: 8px;
@@ -294,7 +346,7 @@ header .topo h1 {
       height: 320px;
       object-fit: cover;
       border-radius: 50%;
-      border: 5px solid #247BA0;
+      border: 5px solid #f3f4f9;
       box-shadow: 0 8px 20px rgba(11,29,81,0.2);
       transition: transform 0.3s ease;
     }
@@ -1269,27 +1321,50 @@ Conclusão e parecer: o que o psicólogo concluiu e possíveis encaminhamentos.
 </script>
 
 <footer class="footer">
-    <img src="https://i.imgur.com/RwyueQz.png" alt="Logo Wallace Caldas">
-    <p>Acompanhe minhas redes sociais</p>
-      
-<div class="contact-buttons"
-     style="margin-top: 0; display: flex; gap: 14px; align-items: center; justify-content: center;">
+  <div class="footer-container">
+
+    <!-- Coluna 1 -->
+    <div class="footer-col">
+      <h3>Wallace Souza Caldas </h3>
+      <p>
+        Cuidando da sua saúde<br>
+        mental com acolhimento<br>
+        e profissionalismo.
+      </p>
+
+      <div class="social-icons">
+
+   
+      </div>
+    </div>
+
+
+    <!-- Coluna 2-->
+    <div class="footer-col">
+      <h3>Contato</h3>
+      <p> (13) 99632-1749</p>
+      <p> wallace.caldas@edu.pucrs.br</p>
+      <p> Av. Ana Costa 228 </p>
+    </div>
+
+    <!-- Coluna 3 -->
+    <div class="footer-col">
+      <h3>Horários</h3>
+      <p>Segunda a Sexta: 8h às 12h</p>
+      <p>Sábado: 8h às 16h</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026. Todos os direitos reservados.
+  </div>
+
+  <!-- Botão WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/5513996321749" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+ <span>Agendar consulta</span>
   </a>
-
-  <a href="https://www.linkedin.com/in/wallace-souza-caldas-b6a073203/"
-     target="_blank" rel="noopener" aria-label="LinkedIn">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-         alt="LinkedIn" class="social-icon">
-  </a>
-
-  <a href="https://www.instagram.com/wallacesouzacaldas"
-     target="_blank" rel="noopener" aria-label="Instagram">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-         alt="Instagram" class="social-icon">
-  </a>
-</div>
-
-
 </footer>
 
 
