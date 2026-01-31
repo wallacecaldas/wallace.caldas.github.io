@@ -23,6 +23,49 @@
 
  
   <style>
+/* Fonte (se ainda não estiver no site) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+.logo-textual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.05;
+
+  /* comportamento ao rolar */
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  z-index: 9999;
+
+  /* acabamento visual opcional */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+/* Nome */
+.logo-textual .nome {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #3c4f99;
+  letter-spacing: -0.5px;
+}
+
+/* Profissão */
+.logo-textual .profissao {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6c7bd9;
+  letter-spacing: 0.35em;
+  margin-top: 6px;
+}
+
+
+
 .comentarios {
   padding: 60px 20px;
   background: #f8f9fa;
@@ -259,25 +302,81 @@ body::before {
       -moz-osx-font-smoothing: grayscale;
     }
 header {
-  position: relative;
-  overflow: hidden;
 
-  background-image: url("https://i.imgur.com/RwyueQz.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+}
 
-
-  color: #f3f4f9;
-  padding: 80px 20px;
+#etapas-avaliacao {
+ max-width: 1100px;
+  margin: 100px auto;
+  padding: 60px 20px;
   text-align: center;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+#etapas-avaliacao h2 {
+  color: #2b6cb0;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+  line-height: 1.2;
+}
+
+.etapas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px 30px;
+  align-items: start;
+}
+
+.etapa {
+  position: relative;
+}
+
+.numero {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #3c4f99;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.etapa h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #9195ca;
+}
+
+.etapa p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #868789;
+}
+
+.seta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
-  
-  animation: fadeUp 1.2s ease-out forwards;
+/* Responsivo */
+@media (max-width: 900px) {
+  .etapas-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .seta {
+    display: none;
+  }
+
+  #etapas-avaliacao h2 {
+    font-size: 2.1rem;
+  }
 }
 
 }
@@ -578,6 +677,67 @@ header .topo h1 {
       user-select: text;
       transition: background-color 0.3s ease;
     }
+#avaliacao-laudo {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+#avaliacao-laudo h2 {
+  color: #3c4f99;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+#avaliacao-laudo .subtitulo {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto 45px auto;
+}
+
+.avaliacao-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 22px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.avaliacao-item {
+  background: linear-gradient(135deg, #3c4f99, #3c4f99);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 18px 26px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avaliacao-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .avaliacao-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #avaliacao-laudo h2 {
+    font-size: 2rem;
+  }
+}
+
 
     /* Rodapé */
     footer {
@@ -697,6 +857,11 @@ header .topo h1 {
 
 <header class="site-header">
 
+<div class="logo-textual">
+
+  <span class="nome">Wallace<br>Souza<br>Caldas</span>
+
+</div>
  
 
     </div>
@@ -1120,9 +1285,104 @@ header .topo h1 {
   </div>
 </section>
 
+<section id="avaliacao-laudo">
+  <h2>O que será avaliado para elaboração do seu laudo?</h2>
+  <p class="subtitulo">
+    A Avaliação Neuropsicológica analisa aspectos cognitivos, emocionais
+    e comportamentais como por exemplo:
+  </p>
+
+  <div class="avaliacao-grid">
+    <div class="avaliacao-item"> Atenção</div>
+    <div class="avaliacao-item"> Humor</div>
+    <div class="avaliacao-item"> Memória</div>
+    <div class="avaliacao-item"> Funções Executivas</div>
+    <div class="avaliacao-item"> Inteligência</div>
+    <div class="avaliacao-item"> Habilidades Sociais</div>
+    <div class="avaliacao-item"> Personalidade</div>
+    <div class="avaliacao-item"> Entre outros</div>
+  </div>
+</section>
 
 </section>
 
+<section id="etapas-avaliacao">
+  <h2>Etapas da Avaliação<br>Neuropsicológica</h2>
+
+  <div class="etapas-grid">
+
+    <div class="etapa">
+      <span class="numero">01</span>
+      <h3>Anamnese</h3>
+      <p>
+        Entrevista inicial para entender a queixa, histórico clínico,
+        comportamental e familiar do paciente.
+      </p>
+    </div>
+
+    <div class="etapa seta">
+      <span class="arrow"></span>
+    </div>
+
+    <div class="etapa">
+      <span class="numero">02</span>
+      <h3>Aplicação de testes</h3>
+      <p>
+        Aplicação de testes neuropsicológicos específicos para avaliar
+        funções cognitivas, como memória, atenção e linguagem.
+      </p>
+    </div>
+
+    <div class="etapa seta">
+      <span class="arrow"></span>
+    </div>
+
+    <div class="etapa">
+      <span class="numero">03</span>
+      <h3>Entrevistas com outros profissionais</h3>
+      <p>
+        Coleta de informações com profissionais que acompanham o paciente,
+        como psicólogos, médicos ou professores.
+      </p>
+    </div>
+
+    <div class="etapa">
+      <span class="numero">04</span>
+      <h3>Entrevistas com pessoas próximas</h3>
+      <p>
+        Conversas com familiares ou pessoas próximas para entender o
+        comportamento do paciente em diferentes contextos.
+      </p>
+    </div>
+
+    <div class="etapa seta">
+      <span class="arrow"></span>
+    </div>
+
+    <div class="etapa">
+      <span class="numero">05</span>
+      <h3>Devolutiva</h3>
+      <p>
+        Apresentação dos principais resultados da avaliação e orientações
+        sobre os próximos passos.
+      </p>
+    </div>
+
+    <div class="etapa seta">
+      <span class="arrow"></span>
+    </div>
+
+    <div class="etapa">
+      <span class="numero">06</span>
+      <h3>Entrega do Laudo</h3>
+      <p>
+        Entrega do laudo com histórico, resultados, conclusões e
+        recomendações.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 
 <!-- Container flex para as duas seções -->
