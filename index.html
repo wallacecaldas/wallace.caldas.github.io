@@ -32,10 +32,6 @@
   justify-content: center;
   line-height: 1.05;
 
-  /* comportamento ao rolar */
- position: absolute;
-top: 20px;
-left: 30px;
 
   /* acabamento visual opcional */
   background: rgba(255, 255, 255, 0.85);
@@ -214,7 +210,7 @@ font-family: 'Bricolage Grotesque', sans-serif;
 
 /* Hover elegante */
 .whatsapp-float:hover {
-  background-color: #1ebe5d;
+  background-color: #3c4f99;
 }
 
 body::before {
@@ -678,7 +674,7 @@ header .topo h1 {
     }
 #avaliacao-laudo {
   max-width: 1100px;
-  margin: 100px auto;
+  margin: 120px auto;
   padding: 60px 20px;
   text-align: center;
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -686,47 +682,54 @@ header .topo h1 {
 
 #avaliacao-laudo h2 {
   color: #3c4f99;
-  font-size: 2.4rem;
-  font-weight: 800;
-  margin-bottom: 14px;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 #avaliacao-laudo .subtitulo {
-  color: #555;
-  font-size: 1.1rem;
+  color: #6b7280;
+  font-size: 1.05rem;
   max-width: 720px;
-  margin: 0 auto 45px auto;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
 }
 
+/* GRID */
 .avaliacao-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(240px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 26px;
   max-width: 900px;
   margin: 0 auto;
 }
 
+/* ITEM */
 .avaliacao-item {
-  background: linear-gradient(135deg, #3c4f99, #3c4f99);
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 18px 26px;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  background: #ffffff;
+  color: #2d3748;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 22px 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(60, 79, 153, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 12px;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
 }
 
+/* HOVER SUAVE */
 .avaliacao-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+  border-color: rgba(60, 79, 153, 0.35);
+  box-shadow: 0 10px 28px rgba(60, 79, 153, 0.15);
+  transform: translateY(-3px);
 }
 
-/* Responsivo */
+/* RESPONSIVO */
 @media (max-width: 600px) {
   .avaliacao-grid {
     grid-template-columns: 1fr;
@@ -736,6 +739,7 @@ header .topo h1 {
     font-size: 2rem;
   }
 }
+
 
 
     /* Rodapé */
