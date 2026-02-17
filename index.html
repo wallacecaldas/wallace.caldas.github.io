@@ -14,7 +14,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wallace Caldas </title>
-  <meta name="description" content="Wallace Souza Caldas - Neuropsicólogo em Santos-SP.  Atendimento presencial e online10:39 15/11/2025" />
+  <meta name="description" content="Wallace Souza Caldas - Neuropsicólogo em Santos-SP.  Atendimento presencial e online 10:39 15/11/2025" />
   <meta name="author" content="Wallace Souza Caldas" />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="https://i.imgur.com/RwyueQz.png">
@@ -23,6 +23,14 @@
 
  
   <style>
+section {
+  max-width: 1100px !important;  /* Define a largura máxima */
+  margin: 80px auto !important;   /* Centraliza e dá espaço entre elas */
+  padding: 60px 20px !important;  /* Espaço interno para o texto não encostar na borda */
+  background-color: #f3f4f9 !important; /* Cor de fundo padrão */
+  border-radius: 24px !important;       /* Arredondamento dos cantos */
+  box-shadow: 0 10px 30px rgba(11,29,81,0.1) !important; /* Sombra suave */
+}
 .hero {
   display: flex;
   justify-content: center; /* centraliza horizontal */
@@ -819,12 +827,20 @@ header .topo h1 {
   .ajuda-item {
     flex: 0 0 48%; /* 2 itens no carrossel */
   }
-
-  #consultorio-fotos,
-  #localizacao {
-    flex: 1 1 100%;
-  }
+#consultorio-fotos, #localizacao {
+  flex: 1 1 500px !important; 
+  max-width: 500px !important; /* Ajusta para que as duas juntas somem o tamanho da 'Sobre' */
+  margin: 0 !important; /* Remove a margem externa para não quebrar a linha */
 }
+
+/* Ajuste no contêiner que segura as duas */
+.container-duplo {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px; /* Mesma largura da seção Sobre */
+  margin: 80px auto;
+  flex-wrap: wrap;}
 
 /* Mobile */
 @media (max-width: 576px) {
@@ -845,6 +861,57 @@ header .topo h1 {
 
 <body>
 
+<section id="hero-principal" style="
+    max-width: 1100px; 
+    margin: 20px auto 80px auto; 
+    padding: 80px 20px; 
+    text-align: center; 
+    background-color: #f3f4f9; 
+    border-radius: 24px; 
+    box-shadow: 0 10px 30px rgba(11,29,81,0.1);
+    font-family: 'Bricolage Grotesque', sans-serif;
+">
+  <div style="max-width: 850px; margin: 0 auto;">
+    <h1 style="
+        color: #3c4f99; 
+        font-size: 3rem; 
+        font-weight: 800; 
+        line-height: 1.2; 
+        margin-bottom: 20px;
+        letter-spacing: -0.02em;
+        border: none;
+    ">
+      Entenda como seu cérebro funciona e recupere sua qualidade de vida.
+    </h1>
+    
+    <p style="
+        font-size: 1.25rem; 
+        color: #4a4a6a; 
+        margin-bottom: 40px; 
+        line-height: 1.6;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    ">
+      Avaliações Neuropsicológicas em Santos para quem busca diagnóstico e tratamento especializado e humanizado.
+    </p>
+
+    <a href="https://wa.me/5513996321749" target="_blank" style="
+        background-color: #3c4f99; 
+        color: white; 
+        padding: 22px 48px; 
+        font-size: 1.2rem; 
+        font-weight: 700; 
+        border-radius: 14px; 
+        text-decoration: none; 
+        display: inline-block; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 10px 25px rgba(60,79,153,0.3);
+    " onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" >
+      Consultar disponibilidade
+    </a>
+  </div>
+</section>
 <header class="site-header">
  
     </div>
@@ -898,10 +965,14 @@ header .topo h1 {
 
     <div style="text-align: justify;">
       <p>
-        Sou Psicólogo e Neuropsicólogo, com atuação baseada na Terapia Cognitivo-Comportamental (TCC). Meu interesse pela Psicologia surgiu ainda na adolescência e, desde então, sigo em constante formação, acreditando no aprendizado contínuo como ferramenta essencial para a compreensão da mente humana e para a promoção de mudanças significativas na vida das pessoas.
+      Com uma trajetória dedicada ao estudo profundo da mente humana, atuo como Neuropsicólogo e Terapeuta Cognitivo-Comportamental em Santos. Minha formação permite que eu ofereça mais do que escuta: ofereço clareza diagnóstica e ferramentas práticas. Seja na investigação de transtornos cognitivos ou no tratamento de demandas emocionais, meu foco é aplicar o que há de mais avançado na neurociência para promover mudanças reais e mensuráveis na vida de cada pessoa que atendo.
       </p>
     </div>
   </div>
+
+</section>
+
+
 
 </section>
 <!-- Certificações -->
@@ -962,22 +1033,31 @@ header .topo h1 {
       <p>Especialista em Neuropsicologia – Avaliação e Reabilitação Psicológica pela Anhembi Morumbi</p>
     </div>
 
-    <div class="cert-card"
-      style="
-               background: transparent;
+  <div class="cert-card"
+     style="
+        background: transparent;
         padding: 16px;
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         text-align: center;
         width: 100%;
         max-width: 300px;
-      ">
+        margin: 0 auto;
+     ">
+  <a href="https://cadastro.cfp.org.br/visualizar.html?profissional=Xk3UJmBmeQA10rnvW9YDTWwQugpSErGcsjmDHHm8Cdo%3D" 
+     target="_blank" 
+     style="text-decoration: none; color: inherit;">
+     
       <img src="http://www.crpsp.org/images/logo.png"
            alt="Conselho Federal de Psicologia"
            loading="lazy"
-           style="max-width: 140px; margin-bottom: 12px;" />
-      <p>Registro Profissional CRP 06 208027</p>
-    </div>
+           style="max-width: 140px; margin-bottom: 12px; display: block; margin-left: auto; margin-right: auto;" />
+      
+      <p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500;">
+        Registro Profissional CRP 06/208027
+      </p>
+  </a>
+</div>
 
     <div class="cert-card"
       style="
@@ -1037,36 +1117,28 @@ header .topo h1 {
 </section>
 
 <section id="servicos">
-<h2 style="color:#3c4f99; font-weight:700; font-size:2.1rem; margin-bottom:40px; text-align:center; letter-spacing:0.05em;"> Meus Serviços
-</h2><div class="cards">
+  <h2 style="color:#3c4f99; font-weight:700; font-size:2.1rem; margin-bottom:40px; text-align:center; letter-spacing:0.05em;">Meus Serviços</h2>
+  
+  <div class="cards">
+    <div>
+      <span class="icon" aria-hidden="true"></span>
+      <h3>Cirurgia Bariátrica e Vasectomia</h3>
+      <p>Prepare-se para sua cirurgia com a segurança necessária. Realizo a avaliação emocional e emito o laudo psicológico exigido, com foco em uma decisão consciente e ética para sua nova fase de vida.</p>
+    </div>
 
+    <div>
+      <span class="icon" aria-hidden="true"></span>
+      <h3>Investigação de Transtornos</h3>
+      <p>Dificuldades de atenção, memória ou organização? Através de testes científicos, identificamos o funcionamento cerebral para dar um diagnóstico claro e um direcionamento clínico preciso.</p>
+    </div>
 
-<div>
-<span class="icon" aria-hidden="true"></span>
-<h3>Avaliação Psicológica para Vasectomia</h3>
-<p>Avaliação essencial para identificar preparo emocional, clareza na decisão e compreensão do procedimento. O processo é sigiloso, ético e garante segurança ao paciente antes da cirurgia.</p>
-</div>
-
-
-<div>
-<span class="icon" aria-hidden="true"></span>
-<h3>Avaliação Psicológica para Bariátrica</h3>
-<p>Análise aprofundada do preparo emocional, motivação e hábitos do paciente. Ajuda a equipe médica e torna o processo cirúrgico mais seguro, consciente e eficaz.</p>
-</div>
-
-
-<div>
-<span class="icon" aria-hidden="true"></span>
-<h3>Avaliação Neuropsicológica</h3>
-<p>Investigação de possíveis transtornos como TDAH, TEA, bipolaridade e alterações cognitivas. Através de entrevistas e testes padronizados, identifica funcionamento cerebral e orienta o tratamento adequado.</p>
-</div>
-
-
-
-
+    <div>
+      <span class="icon" aria-hidden="true"></span>
+      <h3>Psicoterapia</h3>
+      <p>Tratamento focado em resultados para ansiedade e depressão. Utilizo a Terapia Cognitivo-Comportamental para ajudar você a reestruturar pensamentos e desenvolver ferramentas práticas para o dia a dia.</p>
+    </div>
   </div>
-</section>
-</section>
+</section></section>
 <style>
 
 
@@ -1185,316 +1257,99 @@ header .topo h1 {
 
 
 
-<!-- CTA DESTACADO -->
-<section id="cta" 
-  style="
-    background-color: #f3f4f9;
-    padding: 90px 20px;
-    text-align: center;
-    border-radius: 24px;
-    box-shadow: 0 20px 50px rgba(11,29,81,0.25);
-    margin: 120px auto;
-    max-width: 1100px;
-    ">
-
-  <div class="cta-container">
-
-    <h2 style="
-      color: #3c4f99;
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-      letter-spacing: 0.5px;
-    ">
-      Agendar Avaliação
-    </h2>
-
-    <p style="
-      color: #4a4a6a;
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    ">
-      Entre em contato agora e dê o próximo passo para uma avaliação neuropsicológica.
-    </p>
-
-    <!-- BOTÕES -->
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
-      <!-- WhatsApp -->
-      <a href="https://wa.me/5513996321749" target="_blank"
-         style="
-        background-color: #8598f3;
-           color: white;
-           padding: 20px 44px;
-           font-size: 1.2rem;
-           font-weight: bold;
-           border-radius: 14px;
-           text-decoration: none;
-           display: inline-block;
-           transition: transform 0.3s ease, box-shadow 0.3s ease;
-      
-           box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-         "
-         onmouseover="this.style.transform='scale(1.08)';"
-         onmouseout="this.style.transform='scale(1)';"
-      >
-         Agendar pelo WhatsApp
-      </a>
-
-      <!-- Doctoralia -->
-      <a href="https://www.doctoralia.com.br/wallace-souza-caldas/psicologo/santos#address-id=1324703&is-online-only=false&filters%5Bdiseases%5D%5B%5D=4586"
-         target="_blank"
-         style="
-           background-color: #3c4f99;
-           color: white;
-           padding: 20px 44px;
-           font-size: 1.2rem;
-           font-weight: bold;
-           border-radius: 14px;
-           text-decoration: none;
-           display: inline-block;
-           transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-
-           box-shadow: 0 10px 25px rgba(60,79,153,0.35);
-         "
-         onmouseover="this.style.transform='scale(1.06)';"
-         onmouseout="this.style.transform='scale(1)';"
-      >
-         Agendar pelo Doctoralia
-      </a>
-
-    </div>
-
-  </div>
 </section>
+<section id="etapas-avaliacao" class="section-standard" style="max-width: 1100px; margin: 80px auto; padding: 60px 20px; background-color: #f3f4f9; border-radius: 24px; box-shadow: 0 10px 30px rgba(11,29,81,0.1);">
 
-<section id="avaliacao-laudo">
-  <h2>O que será avaliado para elaboração do seu laudo?</h2>
-  <p class="subtitulo">
-    A Avaliação Neuropsicológica analisa aspectos cognitivos, emocionais
-    e comportamentais como por exemplo:
-  </p>
-
-  <div class="avaliacao-grid">
-    <div class="avaliacao-item"> Atenção</div>
-    <div class="avaliacao-item"> Humor</div>
-    <div class="avaliacao-item"> Memória</div>
-    <div class="avaliacao-item"> Funções Executivas</div>
-    <div class="avaliacao-item"> Inteligência</div>
-    <div class="avaliacao-item"> Habilidades Sociais</div>
-    <div class="avaliacao-item"> Personalidade</div>
-    <div class="avaliacao-item"> Entre outros</div>
-  </div>
-</section>
-
-</section>
-
-<section id="etapas-avaliacao">
-
-
-<h2 style="text-align: center;">Etapas da Avaliação Neuropsicológica</h2>
-
-
-  <div class="etapas-grid">
-
-    <div class="etapa">
-      <span class="numero">01</span>
-      <h3>Anamnese</h3>
-      <p>
-        Entrevista inicial para entender a queixa, histórico clínico,
-        comportamental e familiar do paciente.
-      </p>
-    </div>
-
-    <div class="etapa seta">
-      <span class="arrow"></span>
-    </div>
-
-    <div class="etapa">
-      <span class="numero">02</span>
-      <h3>Aplicação de testes</h3>
-      <p>
-        Aplicação de testes neuropsicológicos específicos para avaliar
-        funções cognitivas, como memória, atenção e linguagem.
-      </p>
-    </div>
-
-    <div class="etapa seta">
-      <span class="arrow"></span>
-    </div>
-
-    <div class="etapa">
-      <span class="numero">03</span>
-      <h3>Entrevistas com outros profissionais</h3>
-      <p>
-        Coleta de informações com profissionais que acompanham o paciente,
-        como psicólogos, médicos ou professores.
-      </p>
-    </div>
-
-    <div class="etapa">
-      <span class="numero">04</span>
-      <h3>Entrevistas com pessoas próximas</h3>
-      <p>
-        Conversas com familiares ou pessoas próximas para entender o
-        comportamento do paciente em diferentes contextos.
-      </p>
-    </div>
-
-    <div class="etapa seta">
-      <span class="arrow"></span>
-    </div>
-
-    <div class="etapa">
-      <span class="numero">05</span>
-      <h3>Devolutiva</h3>
-      <p>
-        Apresentação dos principais resultados da avaliação e orientações
-        sobre os próximos passos.
-      </p>
-    </div>
-
-    <div class="etapa seta">
-      <span class="arrow"></span>
-    </div>
-
-    <div class="etapa">
-      <span class="numero">06</span>
-      <h3>Entrega do Laudo</h3>
-      <p>
-        Entrega do laudo com histórico, resultados, conclusões e
-        recomendações.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Container flex para as duas seções -->
-
-
-
-<div style="display: flex; justify-content: center; gap: 40px; max-width: 1200px; margin: 80px auto; padding: 0 20px; flex-wrap: wrap;">
-
-
- <!-- Carrossel de Fotos do Consultório -->
-<section id="consultorio-fotos"
-  style="flex: 1 1 400px; max-width: 500px; padding: 30px 20px; text-align: center;
-  background-color: #f7faff; border-radius: 16px; box-shadow: 0 6px 18px rgba(11,29,81,0.07);">
-
-  <h2 style="color: #3c4f99 ; font-weight: 700; font-size: 2.25rem; margin-bottom: 40px;
-    border-bottom: 3px solid #247BA0; padding-bottom: 12px; letter-spacing: 0.05em;">
-    Conheça o Consultório
+  <h2 style="text-align: center; color: #3c4f99; font-weight: 800; font-size: 2.3rem; margin-bottom: 50px; border: none;">
+    Processo de Avaliação:
   </h2>
 
-  <div class="carousel"
-    style="position: relative; overflow: hidden; border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(11,29,81,0.1); max-width: 100%; height: 320px;">
+  <div class="etapas-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
 
-    <img src="https://psimatheusshibu.com/wp-content/uploads/2025/06/Design-sem-nome-51-768x768.webp"
-      alt="Foto 1 do consultório"
-      class="carousel-image"
-      style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+    <style>
+      .etapa-item {
+        flex: 1 1 180px; /* Base de tamanho para caberem 5 na linha */
+        max-width: 200px;
+        text-align: center;
+      }
+      @media (max-width: 900px) {
+        .etapa-item {
+          flex: 1 1 45%; /* No tablet ficam 2 por linha */
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 600px) {
+        .etapa-item {
+          flex: 1 1 100%; /* No celular fica 1 por linha */
+        }
+      }
+    </style>
 
-  
-    <img src="https://images.prismic.io/livance-domus/ZyP2sK8jQArT0GXY_sala_psico_vmd.png?auto=format,compress"
-      alt="Foto 3 do consultório"
-      class="carousel-image"
-      style="width: 100%; height: 100%; object-fit: cover; display: none;" loading="lazy">
+    <div class="etapa-item">
+      <span class="numero" style="font-size: 3.5rem; font-weight: 800; color: #3c4f99; display: block; margin-bottom: 10px;">01</span>
+      <h3 style="color: #3c4f99; font-size: 1.1rem; margin-bottom: 10px;">Entrevista Inicial</h3>
+      <p style="font-size: 0.9rem; color: #555; line-height: 1.4;">Acolhimento e histórico clínico (Anamnese).</p>
+    </div>
 
-    <button class="prev" aria-label="Imagem anterior"
-      style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);
-      background: #247BA0; color: white; border: none; padding: 10px;
-      cursor: pointer; border-radius: 50%; font-size: 20px;">&#10094;</button>
+    <div class="etapa-item">
+      <span class="numero" style="font-size: 3.5rem; font-weight: 800; color: #3c4f99; display: block; margin-bottom: 10px;">02</span>
+      <h3 style="color: #3c4f99; font-size: 1.1rem; margin-bottom: 10px;">Avaliação Clínica</h3>
+      <p style="font-size: 0.9rem; color: #555; line-height: 1.4;">Aplicação de testes e protocolos científicos.</p>
+    </div>
 
-    <button class="next" aria-label="Próxima imagem"
-      style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);
-      background: #247BA0; color: white; border: none; padding: 10px 14px;
-      cursor: pointer; border-radius: 50%; font-size: 20px;">&#10095;</button>
+    <div class="etapa-item">
+      <span class="numero" style="font-size: 3.5rem; font-weight: 800; color: #3c4f99; display: block; margin-bottom: 10px;">03</span>
+      <h3 style="color: #3c4f99; font-size: 1.1rem; margin-bottom: 10px;">Coleta Contextual</h3>
+      <p style="font-size: 0.9rem; color: #555; line-height: 1.4;">Contato com escola, médicos e familiares.</p>
+    </div>
+
+    <div class="etapa-item">
+      <span class="numero" style="font-size: 3.5rem; font-weight: 800; color: #3c4f99; display: block; margin-bottom: 10px;">04</span>
+      <h3 style="color: #3c4f99; font-size: 1.1rem; margin-bottom: 10px;">Devolutiva e Laudo</h3>
+      <p style="font-size: 0.9rem; color: #555; line-height: 1.4;">Explicação dos resultados e entrega do laudo.</p>
+    </div>
+
+    <div class="etapa-item">
+      <span class="numero" style="font-size: 3.5rem; font-weight: 800; color: #3c4f99; display: block; margin-bottom: 10px;">05</span>
+      <h3 style="color: #3c4f99; font-size: 1.1rem; margin-bottom: 10px;">Encaminhamentos</h3>
+      <p style="font-size: 0.9rem; color: #555; line-height: 1.4;">Orientações para o plano de tratamento.</p>
+    </div>
 
   </div>
-
-  <p style="font-size: 1.1rem; color: #444; margin-top: 25px;">
-    Ambiente climatizado, com café e bebidas à disposição, garantindo o máximo de conforto.
-    Todas as salas são pensadas para sessões terapêuticas, com isolamento acústico e sigilo.
-  </p>
-
-</section>
-
-
-
-
-  <!-- Localização do Consultório -->
-
-
-  <section id="localizacao" aria-label="Localização do consultório" 
-
-
-    style="flex: 1 1 400px; max-width: 500px; padding: 30px 20px; text-align: center; color: #3c4f99;
-
-
-
-
-           background-color: #f7faff; border-radius: 16px; box-shadow: 0 6px 18px rgba(11,29,81,0.07);">
-
-
-    <h2 style="color: #3c4f99; font-weight: 700; font-size: 2.25rem; margin-bottom: 20px; 
-
-
-               border-bottom: 3px solid #3c4f99; padding-bottom: 10px; letter-spacing: 0.05em;">
-
-
-
-
-
-      Localização
-
-
-    </h2>
-
-
-    <iframe
-
-
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.892290095031!2d-46.32749448507144!3d-23.962302484536118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce05f90094a9b5%3A0x88276b8cae0ae6a7!2sAvenida%20Ana%20Costa%2C%20228%20-%20Gonzaga%2C%20Santos%20-%20SP%2C%2011070-000!5e0!3m2!1spt-BR!2sbr!4v1699634981234!5m2!1spt-BR!2sbr"
-
-
-      allowfullscreen=""
-
-
-      loading="lazy"
-
-
-      referrerpolicy="no-referrer-when-downgrade"
-
-
-      aria-label="Mapa do endereço do consultório"
-
-
-      style="width: 100%; height: 400px; border-radius: 12px; box-shadow: 0 6px 18px rgba(11,29,81,0.15); border: none;">
-
-
-    </iframe>
-
-
-
-
-
-    <p style="font-size: 1.1rem; color: #444; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
-
-
-      Avenida Ana Costa, 228 - Gonzaga, Santos - SP, 11070-000, Brasil
-
-
-    </p>
-
-
+ 
   </section>
+
+
+
+<section id="avaliacao-laudo" class="section-standard" style="max-width: 1100px; margin: 80px auto; padding: 60px 20px; background-color: #f3f4f9; border-radius: 24px; box-shadow: 0 10px 30px rgba(11,29,81,0.1);">
+  
+  <h2 style="color: #3c4f99; text-align: center; font-weight: 800; font-size: 2.3rem; margin-bottom: 20px; border:none;">
+    O que é analisado:
+  </h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+    
+    <div style="background: #fff; padding: 25px; border-radius: 18px; border: 1px solid rgba(60, 79, 153, 0.1); text-align: center;">
+      <h3 style="color: #3c4f99; margin-bottom: 10px; font-size: 1.2rem;">Cognição</h3>
+      <p style="font-size: 0.9rem; color: #666;">Memória, Atenção, Inteligência e Linguagem.</p>
+    </div>
+
+    <div style="background: #fff; padding: 25px; border-radius: 18px; border: 1px solid rgba(60, 79, 153, 0.1); text-align: center;">
+      <h3 style="color: #3c4f99; margin-bottom: 10px; font-size: 1.2rem;">Funções Executivas</h3>
+      <p style="font-size: 0.9rem; color: #666;">Planejamento, organização e controle de impulsos.</p>
+    </div>
+
+    <div style="background: #fff; padding: 25px; border-radius: 18px; border: 1px solid rgba(60, 79, 153, 0.1); text-align: center;">
+      <h3 style="color: #3c4f99; margin-bottom: 10px; font-size: 1.2rem;">Emocões</h3>
+      <p style="font-size: 0.9rem; color: #666;">Humor, ansiedade e traços de personalidade.</p>
+    </div>
+
+    <div style="background: #fff; padding: 25px; border-radius: 18px; border: 1px solid rgba(60, 79, 153, 0.1); text-align: center;">
+      <h3 style="color: #3c4f99; margin-bottom: 10px; font-size: 1.2rem;">Comportamentos</h3>
+      <p style="font-size: 0.9rem; color: #666;">Habilidades sociais e adaptação ao cotidiano.</p>
+    </div>
+
+  </div>
+</section>
 
 </div>
 </section>
@@ -1583,131 +1438,74 @@ header .topo h1 {
   </div>
 </section>
 
-<section id="explicacao-e-faq" style="max-width: 1100px; margin: 80px auto; padding: 30px; background-color: #fff; border-radius: 15px; box-shadow: 0 6px 16px rgba(20, 52, 94, 0.12); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<section id="explicacao-e-faq" class="section-standard" style="max-width: 1100px; margin: 80px auto; padding: 60px 40px; background-color: #f3f4f9; border-radius: 24px; box-shadow: 0 10px 30px rgba(11,29,81,0.1); font-family: 'Bricolage Grotesque', sans-serif;">
 
-  <h2 style="color: #3c4f99 ; font-weight: 700; font-size: 2.1rem; margin-bottom: 40px; text-align: center; letter-spacing: 0.05em;">
-     Dúvidas Frequentes 
+  <h2 style="color: #3c4f99; font-weight: 800; font-size: 2.3rem; margin-bottom: 40px; text-align: center; border:none;">
+    Dúvidas Frequentes
   </h2>
 
-  <!-- Acordeões Explicativos -->
-  <div class="accordion-item" style="margin-bottom: 20px; border-bottom: 1px solid #d4d9e2;">
-    <button class="accordion-button" aria-expanded="false" style="all:unset; cursor:pointer; display:flex; justify-content:space-between; width: 100%; padding: 15px 10px; font-size: 1.4rem; font-weight: 600; color: #2a4d7d;">
-      Que informações estão presentes no laudo?
-      <span class="accordion-icon" style="font-weight: 700; font-size: 1.4rem;">+</span>
-    </button>
-    <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; color: #34495e; font-size: 1.15rem; line-height: 1.8; padding: 0 10px;">
-      <p>Um laudo é um documento confidencial e técnico, feito com responsabilidade ética, e serve para clarear diagnósticos, orientar tratamentos ou auxiliar decisões médicas, escolares ou jurídicas. Ele resume os resultados obtidos em entrevistas e testes, explicando como a pessoa está emocionalmente, cognitivamente e comportamentalmente.
-.</p>
-      <p>
-Um laudo deve conter:
+  <div style="display: flex; flex-direction: column; gap: 15px;">
 
-Motivo da avaliação: por que a pessoa procurou o psicólogo.
-
-Procedimentos utilizados: entrevistas, testes e observações realizadas.
-
-Principais resultados: o que foi identificado nas áreas avaliadas.
-
-Conclusão e parecer: o que o psicólogo concluiu e possíveis encaminhamentos.
-
-.</p>
-    
+    <div class="faq-item" style="background: #fff; border-radius: 15px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1); transition: 0.3s;">
+      <button onclick="toggleFaq(this)" style="width: 100%; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
+        <span style="color: #3c4f99; font-weight: 700; font-size: 1.1rem;">Onde é o consultório?</span>
+        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem; transition: 0.3s;">+</span>
+      </button>
+      <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fafaff;">
+        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.6; font-size: 1rem;">
+          Av Ana Costa número 228, edifício Avenue Unique Office ou Av. VX de Novembro, 50 CJ 52B, Centro de Santos
+        </div>
+      </div>
     </div>
-  </div>
 
+    <div class="faq-item" style="background: #fff; border-radius: 15px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1); transition: 0.3s;">
+      <button onclick="toggleFaq(this)" style="width: 100%; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
+        <span style="color: #3c4f99; font-weight: 700; font-size: 1.1rem;">Qual a duração total do processo?</span>
+        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem; transition: 0.3s;">+</span>
+      </button>
+      <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fafaff;">
+        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.6; font-size: 1rem;">
+          A duração da avaliação varia conforme a necessidade do paciente, podendo durar de 6 a 10 sessões. Cada sessão tem duração de 50 minutos.
+        </div>
+      </div>
+    </div>
 
- 
-  <!-- Dúvidas Frequentes -->
-  <h3 style="color: #1e3a5f; font-size: 1.6rem; margin-top: 40px; margin-bottom: 20px;"> Dúvidas Frequentes</h3>
+    <div class="faq-item" style="background: #fff; border-radius: 15px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1); transition: 0.3s;">
+      <button onclick="toggleFaq(this)" style="width: 100%; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
+        <span style="color: #3c4f99; font-weight: 700; font-size: 1.1rem;">Você atende planos de Saúde, e reembolso?</span>
+        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem; transition: 0.3s;">+</span>
+      </button>
+      <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fafaff;">
+        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.6; font-size: 1rem;">
+          Atendo os planos de saúde Unimed e Trasmontano. Sim, Emito nota fiscal. Através do reembolso, você realiza o pagamento da sessão e, após o atendimento, enviamos a nota fiscal e o relatório (quando exigido). Você protocola no aplicativo do seu convênio, que devolve o valor de acordo com as regras do seu plano.
+        </div>
+      </div>
+    </div>
 
-  <div id="faq-menu" role="list" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
-    <button class="faq-btn active" type="button" aria-selected="true" aria-controls="faq-resposta" id="faq1" style="flex: 1 1 45%; min-width: 220px;">Quanto tempo dura cada sessão?</button>
-    <button class="faq-btn" type="button" aria-selected="false" id="faq2">Quanto tempo por sessão é necessário?</button>
-    <button class="faq-btn" type="button" aria-selected="false" id="faq3">Qual valor e quais as modalidades de pagamento?</button>
-    <button class="faq-btn" type="button" aria-selected="false" id="faq4">Você emite nota fiscal?</button>
-    <button class="faq-btn" type="button" aria-selected="false" id="faq5">O que é preciso para sessões online?</button>
-    <button class="faq-btn" type="button" aria-selected="false" id="faq6">Você atende quais idades?</button>
-    <button class="faq-btn" type="button" aria-selected="false" id="faq7">Qualquer psicólogo pode fazer avaliação neuropsicológica?</button>
-  </div>
+    </div>
 
-  <div id="faq-resposta" tabindex="0" aria-live="polite" style="font-size: 1.1rem; color: #333; background: ##f3f4f9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-    <p>Cada sessão tem duração média de 50 minutos, que é o padrão para as avaliações.</p>
-  </div>
-</section>
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      
+      // Fecha outros se quiser (opcional)
+      // document.querySelectorAll('.faq-content').forEach(c => { if(c !== content) c.style.maxHeight = null; });
 
-<script>
-  // Acordeão
-  document.querySelectorAll('.accordion-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const content = button.nextElementSibling;
-      const expanded = button.getAttribute('aria-expanded') === 'true';
+      if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+        content.style.maxHeight = "0px";
+        icon.innerText = "+";
+        item.style.borderColor = "rgba(60, 79, 153, 0.1)";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.innerText = "−";
+        item.style.borderColor = "#3c4f99";
+      }
+    }
+  </script>
 
-      button.setAttribute('aria-expanded', !expanded);
-      content.style.maxHeight = expanded ? '0' : content.scrollHeight + 'px';
-      content.style.paddingTop = expanded ? '0' : '10px';
-      content.style.paddingBottom = expanded ? '0' : '10px';
-      button.querySelector('.accordion-icon').textContent = expanded ? '+' : '−';
-    });
-  });
-
-  // FAQ
-  const faqButtons = document.querySelectorAll('#faq-menu button');
-  const faqResposta = document.getElementById('faq-resposta');
-
-  const respostas = {
-    faq1: 'Cada sessão tem duração média de 50 minutos, que é o padrão para avaliação.',
-    faq2: 'A duração da terapia varia conforme a necessidade do paciente, podendo durar de 6 a 10 sessões.',
-    faq3: ' Não podemos anunciar os valores em meios digitais, conforme determinação do Conselho Regional de Psicologia. Nesse caso, você pode falar diretamente comigo e esclarecer todas as suas dúvidas, a qualquer momento, clicando no ícone do WhatsApp. Aceitamos pagamentos via PIX, cartão de crédito, débito e boleto bancário.',
-    faq4: 'Sim, emito nota fiscal. Através do reembolso, o processo funciona da seguinte forma: você realiza a sessão de psicoterapia e efetua o pagamento normalmente, seja via Pix ou cartão de crédito. Após a sessão, é emitida a nota fiscal e, quando exigido pelo convênio, o relatório psicológico. Em seguida, você encaminha essa documentação ao seu plano de saúde para solicitação do reembolso, e o convênio devolve o valor total ou parcial de acordo com as regras específicas do seu plano. Alguns planos de saúde solicitam pedido médico, o qual pode ser fornecido por qualquer médico com CRM, considerando que a psicoterapia não possui contraindicações.  ',
-    faq5: 'É necessário ter um ambiente reservado, internet estável e dispositivo com câmera e microfone.',
-    faq6: 'A partir de 7 a 99 anos.',
-    faq7: 'Não, somente psicólogos especializados em neuropsicologia.'
-  };
-
-  faqButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      faqButtons.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-      faqResposta.innerHTML = '<p>' + respostas[btn.id] + '</p>';
-      faqResposta.focus();
-    });
-  });
-</script>
-<script>
-(function () {
-  const section = document.querySelector('#consultorio-fotos');
-  if (!section) return;
-
-  const images = section.querySelectorAll('.carousel-image');
-  const next = section.querySelector('.next');
-  const prev = section.querySelector('.prev');
-
-  let index = 0;
-
-  function updateCarousel() {
-    images.forEach((img, i) => {
-      img.style.display = i === index ? 'block' : 'none';
-    });
-  }
-
-  next.addEventListener('click', () => {
-    index = (index + 1) % images.length;
-    updateCarousel();
-  });
-
-  prev.addEventListener('click', () => {
-    index = (index - 1 + images.length) % images.length;
-    updateCarousel();
-  });
-
-  updateCarousel();
-})();
-</script>
-
-<footer class="footer">
+</section><footer class="footer">
   <div class="footer-container">
 
     <!-- Coluna 1 -->
@@ -1716,7 +1514,7 @@ Conclusão e parecer: o que o psicólogo concluiu e possíveis encaminhamentos.
    
 	<p>Terapeuta Cognitivo - Comportamental <br> <p>
         <p>Neuropsicólogo <Br> <p>
-       <p> CRP: 06 208027. <br> <p>
+       <p> CRP: 06 208027 <p>
       </p>
 
       <div class="social-icons">
