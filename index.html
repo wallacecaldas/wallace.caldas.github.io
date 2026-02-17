@@ -68,6 +68,11 @@ section {
   width: max-content;
   animation: slide 60s linear infinite;
 }
+/* Faz a animação pausar quando o mouse estiver sobre o carrossel */
+.carrossel:hover .carrossel-track {
+  animation-play-state: paused;
+  cursor: pointer;
+}
 
 .comentario-card {
   min-width: 280px;
@@ -166,50 +171,33 @@ section {
 }
 
 /* WhatsApp flutuante com texto */
+/* WhatsApp flutuante - Ajustado para aparecer depois */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
   right: 25px;
-
-  display: flex;
+  display: flex; /* O JS vai alternar entre 'none' e 'flex' */
+  opacity: 0;
+  visibility: hidden;
   align-items: center;
   gap: 10px;
-
-  background-color: #7c7cad;
+  background-color: #3c4f99;
   color: #ffffff;
   text-decoration: none;
-
   padding: 10px 16px;
   border-radius: 30px;
-
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 999;
-
-font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Bricolage Grotesque', sans-serif;
   font-size: 14px;
   font-weight: 600;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease;
 }
 
-.whatsapp-float img {
-  width: 28px;
-  height: 28px;
-}
-
-/* Hover elegante */
-.whatsapp-float:hover {
-  background-color: #3c4f99;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
- 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.08; /* bem sutil */
-  z-index: -1;
+/* Classe que o JavaScript vai ativar */
+.whatsapp-float.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 @keyframes fadeUp {
@@ -758,7 +746,7 @@ header .topo h1 {
   font-weight: 700;
   font-size: 2.25rem;
   margin-bottom: 40px;
-  border-bottom: 3px solid #247BA0;
+
   padding-bottom: 12px;
   letter-spacing: 0.05em;
   text-align: center;
@@ -881,7 +869,7 @@ header .topo h1 {
         letter-spacing: -0.02em;
         border: none;
     ">
-      Entenda como seu cérebro funciona e recupere sua qualidade de vida.
+      Entenda como seu cérebro funciona
     </h1>
     
     <p style="
@@ -919,7 +907,58 @@ header .topo h1 {
 </header>
 
 
+<section id="jornada-clareza" style="
+    max-width: 1100px; 
+    margin: 100px auto; 
+    padding: 100px 40px; 
+    background-color: #f8fafc; 
+    border-radius: 32px; 
+    box-shadow: 0 10px 30px rgba(11,29,81,0.05);
+    font-family: 'Bricolage Grotesque', sans-serif;
+">
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+        
+        <div style="flex: 1 1 300px; max-width: 340px; background: #ffffff; padding: 50px 30px; border-radius: 24px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid rgba(60,79,153,0.05);">
+            <div style="margin-bottom: 25px; color: #3c4f99;">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            </div>
+            <h3 style="color: #1e3a8a; font-size: 1.35rem; font-weight: 800; margin-bottom: 15px; letter-spacing: -0.02em;">Rigor Científico</h3>
+            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin: 0;">Protocolos baseados em evidências e formação de excelência para garantir diagnósticos com alto nível de precisão técnica.</p>
+        </div>
 
+        <div style="flex: 1 1 300px; max-width: 340px; background: #ffffff; padding: 50px 30px; border-radius: 24px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid rgba(60,79,153,0.05);">
+            <div style="margin-bottom: 25px; color: #3c4f99;">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h9z"></path></svg>
+            </div>
+            <h3 style="color: #1e3a8a; font-size: 1.35rem; font-weight: 800; margin-bottom: 15px; letter-spacing: -0.02em;">Visão Terapêutica</h3>
+            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin: 0;">O laudo é o início do processo. Entregamos um plano de ação claro e encaminhamentos assertivos para o seu tratamento.</p>
+        </div>
+
+        <div style="flex: 1 1 300px; max-width: 340px; background: #ffffff; padding: 50px 30px; border-radius: 24px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid rgba(60,79,153,0.05);">
+            <div style="margin-bottom: 25px; color: #3c4f99;">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 style="color: #1e3a8a; font-size: 1.35rem; font-weight: 800; margin-bottom: 15px; letter-spacing: -0.02em;">Compromisso Ético</h3>
+            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin: 0;">Atendimento humanizado, acolhedor e sigilo absoluto, respeitando a sua individualidade em cada etapa da avaliação.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 70px;">
+        <a href="https://wa.me/5513996321749" target="_blank" style="
+            text-decoration: none; 
+            color: #1e3a8a; 
+            font-weight: 700; 
+            font-size: 1rem; 
+            letter-spacing: 0.08em; 
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(30,58,138,0.2);
+            padding-bottom: 8px;
+        ">
+            Falar com o Especialista
+        </a>
+    </div>
+</section>
 
 <section id="sobre"
   style="
@@ -965,10 +1004,38 @@ header .topo h1 {
 
     <div style="text-align: justify;">
       <p>
-      Com uma trajetória dedicada ao estudo profundo da mente humana, atuo como Neuropsicólogo e Terapeuta Cognitivo-Comportamental em Santos. Minha formação permite que eu ofereça mais do que escuta: ofereço clareza diagnóstica e ferramentas práticas. Seja na investigação de transtornos cognitivos ou no tratamento de demandas emocionais, meu foco é aplicar o que há de mais avançado na neurociência para promover mudanças reais e mensuráveis na vida de cada pessoa que atendo.
+      Atuo como Neuropsicólogo e Terapeuta Cognitivo-Comportamental em Santos e Online para todo Brasil. Minha formação permite que eu ofereça mais do que escuta: ofereço clareza diagnóstica e ferramentas práticas. Seja na investigação de transtornos cognitivos ou no tratamento de demandas emocionais, meu foco é aplicar o que há de mais avançado na neurociência para promover mudanças reais e mensuráveis na vida de cada pessoa que atendo.
       </p>
+<div style="margin-top: 30px;">
+    <a href="https://br.linkedin.com/in/wallace-souza-caldas-b6a073203" 
+       target="_blank" 
+       style="
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            background-color: transparent; 
+            color: #1e3a8a; 
+            padding: 14px 28px; 
+            font-size: 0.95rem; 
+            font-weight: 700; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            border: 2px solid rgba(30, 58, 138, 0.2);
+            transition: all 0.3s ease;
+            font-family: 'Bricolage Grotesque', sans-serif;
+       " 
+       onmouseover="this.style.borderColor='#1e3a8a'; this.style.backgroundColor='rgba(30, 58, 138, 0.05)'; this.style.transform='translateY(-2px)';" 
+       onmouseout="this.style.borderColor='rgba(30, 58, 138, 0.2)'; this.style.backgroundColor='transparent'; this.style.transform='translateY(0)';"
+    >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        Trajetória Profissional
+    </a>
+</div>
     </div>
   </div>
+
 
 </section>
 
@@ -1261,7 +1328,7 @@ header .topo h1 {
 <section id="etapas-avaliacao" class="section-standard" style="max-width: 1100px; margin: 80px auto; padding: 60px 20px; background-color: #f3f4f9; border-radius: 24px; box-shadow: 0 10px 30px rgba(11,29,81,0.1);">
 
   <h2 style="text-align: center; color: #3c4f99; font-weight: 800; font-size: 2.3rem; margin-bottom: 50px; border: none;">
-    Processo de Avaliação:
+    Processo de Avaliação
   </h2>
 
   <div class="etapas-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
@@ -1324,7 +1391,7 @@ header .topo h1 {
 <section id="avaliacao-laudo" class="section-standard" style="max-width: 1100px; margin: 80px auto; padding: 60px 20px; background-color: #f3f4f9; border-radius: 24px; box-shadow: 0 10px 30px rgba(11,29,81,0.1);">
   
   <h2 style="color: #3c4f99; text-align: center; font-weight: 800; font-size: 2.3rem; margin-bottom: 20px; border:none;">
-    O que é analisado:
+    O que é analisado
   </h2>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
     
@@ -1357,7 +1424,7 @@ header .topo h1 {
 <section class="comentarios"> 
 <h2 style="color: #3c4f99 ; font-weight: 700; font-size: 2.1rem; margin-bottom: 40px; text-align: center; letter-spacing: 0.05em;">
 
-  <h2>Depoimentos</h2>
+  <h2>Depoimentos dos pacientes</h2>
 
   <div class="carrossel">
     <div class="carrossel-track">
@@ -1374,7 +1441,7 @@ header .topo h1 {
         <div class="estrelas">★★★★★
 </div>
         <strong class="avaliacao">Excelente</strong>
-        <p>Profissional extremamente atencioso e claro.</p>
+        <p>Profissional extremamente atencioso e carismático.</p>
         <span>— João P.</span>
       </div>
 
@@ -1436,52 +1503,110 @@ header .topo h1 {
 
     </div>
   </div>
-</section>
+<div style="text-align: center; margin-top: 50px;">
+    <a href="https://www.doctoralia.com.br/wallace-souza-caldas/psicologo/santos#address-id=1324703&is-online-only=false&filters%5Bdiseases%5D%5B%5D=4586" 
+       target="_blank" 
+       style="
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px; 
+            background-color: transparent; 
+            color: #1e3a8a; 
+            padding: 18px 36px; 
+            font-size: 1rem; 
+            font-weight: 700; 
+            border-radius: 14px; 
+            text-decoration: none; 
+            border: 2px solid rgba(30, 58, 138, 0.3);
+            transition: all 0.3s ease;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            letter-spacing: 0.02em;
+       " 
+       onmouseover="this.style.borderColor='#1e3a8a'; this.style.backgroundColor='rgba(30, 58, 138, 0.05)'; this.style.transform='translateY(-3px)';" 
+       onmouseout="this.style.borderColor='rgba(30, 58, 138, 0.3)'; this.style.backgroundColor='transparent'; this.style.transform='translateY(0)';"
+    >
+  
+        Conferir todas as avaliações no Doctoralia
+    </a>
+</div>
 
-<section id="explicacao-e-faq" class="section-standard" style="max-width: 1100px; margin: 80px auto; padding: 60px 40px; background-color: #f3f4f9; border-radius: 24px; box-shadow: 0 10px 30px rgba(11,29,81,0.1); font-family: 'Bricolage Grotesque', sans-serif;">
+<section id="explicacao-e-faq" style="
+    max-width: 1100px; 
+    margin: 80px auto; 
+    padding: 80px 40px; 
+    background-color: #f8fafc; 
+    border-radius: 32px; 
+    box-shadow: 0 10px 30px rgba(11,29,81,0.05); 
+    font-family: 'Bricolage Grotesque', sans-serif;
+">
 
-  <h2 style="color: #3c4f99; font-weight: 800; font-size: 2.3rem; margin-bottom: 40px; text-align: center; border:none;">
-    Dúvidas Frequentes
+  <h2 style="color: #1e3a8a; font-weight: 800; font-size: 2.6rem; margin-bottom: 50px; text-align: center; border:none; letter-spacing: -0.04em;">
+    Dúvidas frequentes
   </h2>
 
   <div style="display: flex; flex-direction: column; gap: 15px;">
 
-    <div class="faq-item" style="background: #fff; border-radius: 15px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1); transition: 0.3s;">
-      <button onclick="toggleFaq(this)" style="width: 100%; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
-        <span style="color: #3c4f99; font-weight: 700; font-size: 1.1rem;">Onde é o consultório?</span>
-        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem; transition: 0.3s;">+</span>
+    <div style="background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1);">
+      <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
+        <span style="color: #1e3a8a; font-weight: 700; font-size: 1.15rem;">Como a Avaliação Neuropsicológica ajuda no meu caso?</span>
+        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem;">+</span>
       </button>
       <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fafaff;">
-        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.6; font-size: 1rem;">
-          Av Ana Costa número 228, edifício Avenue Unique Office ou Av. VX de Novembro, 50 CJ 52B, Centro de Santos
+        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.7; font-size: 1rem;">
+          A avaliação vai além de um diagnóstico. Ela mapeia suas forças e fraquezas cognitivas (memória, atenção, raciocínio). Com o laudo em mãos, você tem um direcionamento para tratamentos médicos, adaptações escolares ou intervenções terapêuticas assertivas, economizando tempo e recursos com tentativas ineficazes.
         </div>
       </div>
     </div>
 
-    <div class="faq-item" style="background: #fff; border-radius: 15px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1); transition: 0.3s;">
-      <button onclick="toggleFaq(this)" style="width: 100%; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
-        <span style="color: #3c4f99; font-weight: 700; font-size: 1.1rem;">Qual a duração total do processo?</span>
-        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem; transition: 0.3s;">+</span>
+    <div style="background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1);">
+      <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
+        <span style="color: #1e3a8a; font-weight: 700; font-size: 1.15rem;">Você atende convênios ou trabalha com reembolso?</span>
+        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem;">+</span>
       </button>
       <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fafaff;">
-        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.6; font-size: 1rem;">
-          A duração da avaliação varia conforme a necessidade do paciente, podendo durar de 6 a 10 sessões. Cada sessão tem duração de 50 minutos.
+        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.7; font-size: 1rem;">
+          Atendo diretamente os planos <strong>Unimed e Trasmontano</strong>. Para outros convênios, trabalho com o sistema de <strong>reembolso</strong>: forneço a nota fiscal e o relatório necessário para que você solicite a devolução do valor junto à sua operadora, conforme as regras do seu contrato.
         </div>
       </div>
     </div>
 
-    <div class="faq-item" style="background: #fff; border-radius: 15px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1); transition: 0.3s;">
-      <button onclick="toggleFaq(this)" style="width: 100%; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
-        <span style="color: #3c4f99; font-weight: 700; font-size: 1.1rem;">Você atende planos de Saúde, e reembolso?</span>
-        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem; transition: 0.3s;">+</span>
+    <div style="background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1);">
+      <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
+        <span style="color: #1e3a8a; font-weight: 700; font-size: 1.15rem;">Quanto tempo leva para receber o laudo final?</span>
+        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem;">+</span>
       </button>
       <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fafaff;">
-        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.6; font-size: 1rem;">
-          Atendo os planos de saúde Unimed e Trasmontano. Sim, Emito nota fiscal. Através do reembolso, você realiza o pagamento da sessão e, após o atendimento, enviamos a nota fiscal e o relatório (quando exigido). Você protocola no aplicativo do seu convênio, que devolve o valor de acordo com as regras do seu plano.
+        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.7; font-size: 1rem;">
+          O processo completo dura em média de <strong>6 a 8 sessões</strong>, incluindo a entrevista inicial, aplicação de testes e a devolutiva. Após a última sessão de testes, o laudo técnico detalhado é entregue em um prazo máximo de 15 dias úteis, garantindo rigor na análise dos dados.
         </div>
       </div>
     </div>
 
+    <div style="background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1);">
+      <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
+        <span style="color: #1e3a8a; font-weight: 700; font-size: 1.15rem;">A terapia ou avaliação pode ser feita online?</span>
+        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem;">+</span>
+      </button>
+      <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fafaff;">
+        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.7; font-size: 1rem;">
+          A psicoterapia (TCC) pode ser realizada 100% online com a mesma eficácia da presencial. Já a Avaliação Neuropsicológica possui protocolos específicos: alguns podem ser feitos online, enquanto outros (especialmente com crianças ou idosos) podem exigir sessões presenciais em <strong>Santos</strong> para garantir a validade dos testes.
+        </div>
+      </div>
+    </div>
+<div style="background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid rgba(60, 79, 153, 0.1);">
+      <button onclick="toggleFaq(this)" style="width: 100%; padding: 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
+        <span style="color: #1e3a8a; font-weight: 700; font-size: 1.15rem;">Qual a faixa etária atendida?</span>
+        <span class="faq-icon" style="color: #3c4f99; font-size: 1.5rem;">+</span>
+      </button>
+      <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fafaff;">
+        <div style="padding: 0 25px 25px 25px; color: #555; line-height: 1.7; font-size: 1rem;">
+          Realizo avaliações neuropsicológicas e atendimentos clínicos para pacientes <strong>a partir dos 7 anos até os 69 anos</strong>. Essa amplitude permite o acompanhamento desde a fase de alfabetização e desenvolvimento escolar até o suporte ao adulto e ao idoso.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
     </div>
 
   <script>
@@ -1542,9 +1667,19 @@ header .topo h1 {
 
   </div>
 
-  <div class="footer-bottom">
-    © 2026. Todos os direitos reservados.
+<div class="footer-bottom">
+  Wallace Souza Caldas © Todos os direitos reservados.
+  
+  <div style="margin-top: 20px;">
+    <img src="https://i.imgur.com/RwyueQz.png" alt="Logo Wallace Caldas" style="
+        width: 60px; /* Tamanho discreto para rodapé */
+        height: auto;
+        opacity: 0.8; /* Opacidade sutil para não brigar com o texto */
+        display: block;
+        margin: 0 auto;
+    ">
   </div>
+</div>
 
   <!-- Botão WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/5513996321749" target="_blank">
@@ -1552,6 +1687,21 @@ header .topo h1 {
   </a>
 </footer>
 
-
+<script>
+window.addEventListener('scroll', function() {
+  const secaoServicos = document.getElementById('servicos');
+  const botaoWhats = document.querySelector('.whatsapp-float');
+  
+  // Pega a posição do topo da seção de serviços
+  const posicaoServicos = secaoServicos.getBoundingClientRect().top;
+  
+  // Se o topo da seção chegar na metade da tela (ou menos), mostra o botão
+  if (posicaoServicos < window.innerHeight) {
+    botaoWhats.classList.add('visible');
+  } else {
+    botaoWhats.classList.remove('visible');
+  }
+});
+</script>
 </body>
 </html>
