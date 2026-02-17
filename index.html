@@ -23,41 +23,21 @@
 
  
   <style>
+.hero {
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;     /* centraliza vertical */
+  padding: 0;              /* remove padding da seção */
+}
+
+.hero img {
+  max-width: 100%;  /* não ultrapassa a largura da tela */
+  height: auto;     /* mantém proporção da imagem */
+  }
+
+
 /* Fonte (se ainda não estiver no site) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
-
-.logo-textual {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.05;
-
-
-  /* acabamento visual opcional */
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  padding: 10px 14px;
-  border-radius: 12px;
-}
-
-/* Nome */
-.logo-textual .nome {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: #3c4f99;
-  letter-spacing: -0.5px;
-}
-
-/* Profissão */
-.logo-textual .profissao {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #6c7bd9;
-  letter-spacing: 0.35em;
-  margin-top: 6px;
-}
 
 
 
@@ -119,8 +99,7 @@
   }
 }
 .footer {
-  background-color: #3c4f99;
-  color: #f3f4f9;
+
   padding: 50px 20px 20px;
    font-family: 'Bricolage Grotesque', ', sans-serif;
   position: relative;
@@ -288,15 +267,20 @@ body::before {
       margin: 0;
       padding: 0;
     }
-    body {
-      font-family: 'Bricolage Grotesque', ', sans-serif;
-      background-color: #f3f4f9;
-      color: #222;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-header {
+ body {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  background-image: url('https://i.imgur.com/iMHuoCO.jpeg');
+  background-size: cover;        /* cobre toda a tela */
+  background-position: center;   /* centraliza a imagem */
+  background-repeat: no-repeat;  /* não repete a imagem */
+  background-attachment: fixed;  /* fixa quando rolar a página */
+  color: #222;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f6f6;     /* fallback caso a imagem não carregue */
+}
+
 
 }
 
@@ -419,11 +403,14 @@ header .topo h1 {
       max-width: 500px;
       margin: 0 auto;
     }
-    section {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
+ section {
+  background-color: #f7f6f6; /* cor do fundo estilo cartão */
+  border-radius: 15px;       /* cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra suave */
+  padding: 40px 20px;        /* espaçamento interno */
+  margin: 20px auto;         /* separação entre seções */
+  max-width: 1200px;         /* largura máxima para centralizar conteúdo */
+}
     h2 {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 800;
@@ -452,7 +439,7 @@ header .topo h1 {
     }
     a.button {
       display: inline-block;
-      background-color: #f3f4f9;
+      background-color: transparent;
       color: #f3f4f9;
       padding: 14px 36px;
       border-radius: 8px;
@@ -467,7 +454,7 @@ header .topo h1 {
     }
     a.button:hover,
     a.button:focus {
-      background-color: #162f80;
+      background-color: transparent;
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(22,47,128,0.5);
       outline: none;
@@ -511,7 +498,7 @@ header .topo h1 {
 
     /* CTA */
     #cta {
-      background-color: #f3f4f9;
+      background-color: transparent;
       color: #f3f4f9;
       text-align: center;
       padding: 60px 20px;
@@ -673,6 +660,7 @@ header .topo h1 {
       transition: background-color 0.3s ease;
     }
 #avaliacao-laudo {
+
   max-width: 1100px;
   margin: 120px auto;
   padding: 60px 20px;
@@ -857,21 +845,13 @@ header .topo h1 {
 
 <body>
 
-
 <header class="site-header">
-
-<div class="logo-textual">
-
-  <span class="nome">Wallace<br>Souza<br>Caldas</span>
-
-
-
-</div>
  
-
     </div>
   </div> 
 </header>
+
+
 
 
 <section id="sobre"
@@ -907,17 +887,18 @@ header .topo h1 {
 
       "
     />
+
   </div>
 
 
   <div class="text" style="flex: 2 1 600px; max-width: 700px;   
   animation: fadeUp 1.2s ease-out forwards;">
 
-    <h2 style="color: #3c4f99;">Quem sou eu?</h2>
+    <h2 style="color: #3c4f99;">Neuropsicólogo Wallace S. Caldas</h2>
 
     <div style="text-align: justify;">
       <p>
-        Meu nome é Wallace Souza Caldas, Sou Psicólogo e Neuropsicólogo, com atuação baseada na Terapia Cognitivo-Comportamental (TCC). Meu interesse pela Psicologia surgiu ainda na adolescência e, desde então, sigo em constante formação, acreditando no aprendizado contínuo como ferramenta essencial para a compreensão da mente humana e para a promoção de mudanças significativas na vida das pessoas.
+        Sou Psicólogo e Neuropsicólogo, com atuação baseada na Terapia Cognitivo-Comportamental (TCC). Meu interesse pela Psicologia surgiu ainda na adolescência e, desde então, sigo em constante formação, acreditando no aprendizado contínuo como ferramenta essencial para a compreensão da mente humana e para a promoção de mudanças significativas na vida das pessoas.
       </p>
     </div>
   </div>
@@ -1056,10 +1037,8 @@ header .topo h1 {
 </section>
 
 <section id="servicos">
-<h2 style="color:#3c4f99; font-weight:700; font-size:2.1rem; margin-bottom:40px; text-align:center; letter-spacing:0.05em;">
-  Meus Serviços
-</h2>
-<div class="cards">
+<h2 style="color:#3c4f99; font-weight:700; font-size:2.1rem; margin-bottom:40px; text-align:center; letter-spacing:0.05em;"> Meus Serviços
+</h2><div class="cards">
 
 
 <div>
@@ -1089,6 +1068,9 @@ header .topo h1 {
 </section>
 </section>
 <style>
+
+
+
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -1312,7 +1294,10 @@ header .topo h1 {
 </section>
 
 <section id="etapas-avaliacao">
-  <h2>Etapas da Avaliação<br>Neuropsicológica</h2>
+
+
+<h2 style="text-align: center;">Etapas da Avaliação Neuropsicológica</h2>
+
 
   <div class="etapas-grid">
 
@@ -1641,7 +1626,7 @@ Conclusão e parecer: o que o psicólogo concluiu e possíveis encaminhamentos.
   <div id="faq-menu" role="list" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
     <button class="faq-btn active" type="button" aria-selected="true" aria-controls="faq-resposta" id="faq1" style="flex: 1 1 45%; min-width: 220px;">Quanto tempo dura cada sessão?</button>
     <button class="faq-btn" type="button" aria-selected="false" id="faq2">Quanto tempo por sessão é necessário?</button>
-    <button class="faq-btn" type="button" aria-selected="false" id="faq3">Quais as modalidades de pagamento?</button>
+    <button class="faq-btn" type="button" aria-selected="false" id="faq3">Qual valor e quais as modalidades de pagamento?</button>
     <button class="faq-btn" type="button" aria-selected="false" id="faq4">Você emite nota fiscal?</button>
     <button class="faq-btn" type="button" aria-selected="false" id="faq5">O que é preciso para sessões online?</button>
     <button class="faq-btn" type="button" aria-selected="false" id="faq6">Você atende quais idades?</button>
@@ -1759,20 +1744,3 @@ Conclusão e parecer: o que o psicólogo concluiu e possíveis encaminhamentos.
       <p>Segunda a Sexta: 8h às 12h</p>
       <p>Sábado: 8h às 16h</p>
   <p>Presencial e Online</p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026. Todos os direitos reservados.
-  </div>
-
-  <!-- Botão WhatsApp -->
-  <a class="whatsapp-float" href="https://wa.me/5513996321749" target="_blank">
- <span>Agendar consulta</span>
-  </a>
-</footer>
-
-
-</body>
-</html>
