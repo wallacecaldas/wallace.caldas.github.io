@@ -875,27 +875,13 @@ header .topo h1 {
 
 <body>
 
-<section id="hero-principal" style="
-    max-width: 1100px; 
-    margin: 20px auto 80px auto; 
-    padding: 80px 20px; 
-    text-align: center; 
-    background-color: #f3f4f9; 
-    border-radius: 24px; 
-    box-shadow: 0 10px 30px rgba(11,29,81,0.1);
-    font-family: 'Bricolage Grotesque', sans-serif;
-">
-
-<div style="max-width: 900px; margin: 0 auto;">
-
-<!-- LOGO + TEXTO MODELO PROFISSIONAL -->
 <div style="
     display:flex;
     align-items:center;
     justify-content:center;
     gap:35px;
     margin-bottom:40px;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
 ">
 
 <!-- LOGO -->
@@ -904,6 +890,7 @@ src="https://i.imgur.com/RwyueQz.png"
 style="
 width:200px;
 height:auto;
+flex-shrink:0;
 "
 >
 
@@ -913,18 +900,23 @@ width:6px;
 height:160px;
 background:#4c5bb3;
 border-radius:3px;
+flex-shrink:0;
 ">
 </div>
 
 <!-- TEXTO -->
-<div style="text-align:left;">
+<div style="
+text-align:left;
+flex-shrink:0;
+">
 
 <div style="
 font-size:3rem;
 font-weight:800;
-color:#2d3270;
+color:#f3f5fa;
 line-height:1.05;
 letter-spacing:-0.02em;
+white-space:nowrap;
 ">
 
 Wallace<br>
@@ -937,8 +929,9 @@ Caldas
 margin-top:10px;
 font-size:1rem;
 letter-spacing:4px;
-color:#6d79c7;
+color:#7484ed;
 font-weight:600;
+white-space:nowrap;
 ">
 
 NEUROPSICÓLOGO
@@ -948,22 +941,6 @@ NEUROPSICÓLOGO
 </div>
 
 </div>
-
-
-<p style="
-    font-size: 1.25rem; 
-    color: #4a4a6a; 
-    margin-bottom: 40px; 
-    line-height: 1.6;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-">
-Avaliações Neuropsicológicas em Santos presencial e Online.
-</p>
-
-
-
 </div>
 </section><section id="sobre"
   style="
@@ -1013,53 +990,58 @@ Avaliações Neuropsicológicas em Santos presencial e Online.
 Meu objetivo é oferecer um atendimento pautado na empatia, no respeito e na psicoeducação. Busco orientar cada pessoa para o desenvolvimento de uma vida mais funcional, com maior autonomia e com redução do sofrimento psicológico.
       </p>
 
-<div style="margin-top: 30px;">
-    <a href="https://br.linkedin.com/in/wallace-souza-caldas-b6a073203" 
-       target="_blank" 
-       style="
-            display: inline-flex; 
-            align-items: center; 
-            gap: 10px; 
-            background-color: transparent; 
-            color: #1e3a8a; 
-            padding: 14px 28px; 
-            font-size: 0.95rem; 
-            font-weight: 700; 
-            border-radius: 12px; 
-            text-decoration: none; 
-            border: 2px solid rgba(30, 58, 138, 0.2);
-            transition: all 0.3s ease;
-            font-family: 'Bricolage Grotesque', sans-serif;
-       " 
-       onmouseover="this.style.borderColor='#1e3a8a'; this.style.backgroundColor='rgba(30, 58, 138, 0.05)'; this.style.transform='translateY(-2px)';" 
-       onmouseout="this.style.borderColor='rgba(30, 58, 138, 0.2)'; this.style.backgroundColor='transparent'; this.style.transform='translateY(0)';"
-    >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-        </svg>
-       Conheça minha trajetória Profissional
-    </a>
+<div style="
+margin-top: 30px;
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+justify-content:center;
+">
+
+<a href="https://br.linkedin.com/in/wallace-souza-caldas-b6a073203" 
+target="_blank" 
+style="
+display: inline-flex; 
+align-items: center; 
+gap: 10px; 
+background-color: transparent; 
+color: #1e3a8a; 
+padding: 14px 28px; 
+font-size: 0.95rem; 
+font-weight: 700; 
+border-radius: 12px; 
+text-decoration: none; 
+border: 2px solid rgba(30, 58, 138, 0.2);
+transition: all 0.3s ease;
+font-family: 'Bricolage Grotesque', sans-serif;
+">
+
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+</svg>
+
+Conheça minha trajetória Profissional
+
+</a>
+
+
 <a href="https://wa.me/5513996321749" 
-   target="_blank" 
-   style="
-        display: inline-flex; 
-        align-items: center; 
-        gap: 10px; 
-        background-color: transparent; 
-        color: #1e3a8a; 
-        padding: 14px 28px; 
-        font-size: 0.95rem; 
-        font-weight: 700; 
-        border-radius: 12px; 
-        text-decoration: none; 
-        border: 2px solid rgba(30, 58, 138, 0.2);
-        transition: all 0.3s ease;
-        font-family: 'Bricolage Grotesque', sans-serif;
-        margin-left: 12px;
-   " 
-   onmouseover="this.style.borderColor='#1e3a8a'; this.style.backgroundColor='rgba(30, 58, 138, 0.05)'; this.style.transform='translateY(-2px)';" 
-   onmouseout="this.style.borderColor='rgba(30, 58, 138, 0.2)'; this.style.backgroundColor='transparent'; this.style.transform='translateY(0)';"
->
+target="_blank" 
+style="
+display: inline-flex; 
+align-items: center; 
+gap: 10px; 
+background-color: transparent; 
+color: #1e3a8a; 
+padding: 14px 28px; 
+font-size: 0.95rem; 
+font-weight: 700; 
+border-radius: 12px; 
+text-decoration: none; 
+border: 2px solid rgba(30, 58, 138, 0.2);
+transition: all 0.3s ease;
+font-family: 'Bricolage Grotesque', sans-serif;
+">
 
 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.029-.967-.272-.099-.47-.148-.669.15-.198.297-.768.966-.941 1.164-.173.198-.347.223-.644.074-.297-.148-1.255-.463-2.39-1.475-.883-.787-1.479-1.759-1.651-2.056-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.173.198-.297.297-.495.099-.198.05-.371-.025-.52-.074-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.371-.272.297-1.04 1.016-1.04 2.475s1.065 2.871 1.213 3.069c.149.198 2.095 3.2 5.077 4.487.709.306 1.261.489 1.692.626.711.226 1.358.194 1.87.118.571-.085 1.758-.718 2.006-1.412.247-.694.247-1.29.173-1.412-.074-.124-.272-.198-.57-.347zM12.004 2.003c-5.523 0-10 4.478-10 10 0 1.768.463 3.425 1.272 4.86L2 22l5.273-1.372c1.394.761 2.992 1.194 4.731 1.194 5.523 0 10-4.478 10-10s-4.477-10-10-10z"/>
@@ -1068,9 +1050,8 @@ Meu objetivo é oferecer um atendimento pautado na empatia, no respeito e na psi
 Consultar Disponibilidade
 
 </a>
-    </div>
-  </div>
 
+</div>
 
 </section>
 
@@ -1693,6 +1674,28 @@ Consultar Disponibilidade
     </div>
 
   </div>
+<div style="text-align:center; margin-top:40px;">
+
+<a href="https://wa.me/5513996321749" target="_blank" style="
+    background-color: #3c4f99; 
+    color: white; 
+    padding: 20px 46px; 
+    font-size: 1.15rem; 
+    font-weight: 700; 
+    border-radius: 14px; 
+    text-decoration: none; 
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(60,79,153,0.3);
+"
+onmouseover="this.style.transform='scale(1.05)';" 
+onmouseout="this.style.transform='scale(1)';">
+
+Mais informações
+
+</a>
+
+</div>
 </section>
     </div>
 
