@@ -265,17 +265,14 @@ section {
     }
  body {
   font-family: 'Bricolage Grotesque', sans-serif;
-  background-image: url('https://i.imgur.com/iMHuoCO.jpeg');
-  background-size: cover;        /* cobre toda a tela */
-  background-position: center;   /* centraliza a imagem */
-  background-repeat: no-repeat;  /* não repete a imagem */
-  background-attachment: fixed;  /* fixa quando rolar a página */
-  color: #222;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #f7f6f6;     /* fallback caso a imagem não carregue */
-}
+background-color: #1F3A5F; /* fallback */
+background: linear-gradient(
+  160deg,
+  #3E6A9E 0%,
+  #1F3A5F 50%,
+  #0B1623 100%
+);
+);}
 
 
 }
@@ -728,7 +725,6 @@ header .topo h1 {
 
     /* Rodapé */
     footer {
-      background-color: #3c4f99 ;
       color: #cfd8dc;
       text-align: center;
       padding: 30px 20px;
@@ -890,18 +886,19 @@ header .topo h1 {
     font-family: 'Bricolage Grotesque', sans-serif;
 ">
   <div style="max-width: 850px; margin: 0 auto;">
+    
     <h1 style="
         color: #3c4f99; 
         font-size: 3rem; 
-        font-weight: 800; 
+        font-weight: 00; 
         line-height: 1.2; 
         margin-bottom: 20px;
         letter-spacing: -0.02em;
         border: none;
     ">
-      Neuropsicólogo em santos <br>| Wallace Souza Caldas
+     Wallace Souza Caldas<br> Neuropsicólogo em Santos
     </h1>
-    
+
     <p style="
         font-size: 1.25rem; 
         color: #4a4a6a; 
@@ -928,6 +925,7 @@ header .topo h1 {
     " onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" >
       Consultar disponibilidade
     </a>
+
   </div>
 </section>
 <header class="site-header">
@@ -935,6 +933,116 @@ header .topo h1 {
     </div>
   </div> 
 </header>
+
+
+<section id="sobre"
+  style="
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    background-color: #f3f4f9;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(11,29,81,0.1);
+      font-family: 'Bricolage Grotesque', sans-serif;
+  ">
+
+  <div class="photo" style="position: relative; flex: 1 1 320px; max-width: 320px; margin: 0 auto;">
+<img
+  class="foto-perfil"
+  src="https://i.imgur.com/mfJ5lEX.png"
+  alt="Wallace foto"
+  loading="lazy"
+  style="
+    width: 320px;
+    height: 400px;
+    animation: fadeUp 1.2s ease-out forwards;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 20px;
+    border: 5px solid #247BA0;
+    box-shadow: 0 8px 20px rgba(11,29,81,0.2);
+  ">
+
+  </div>
+
+
+  <div class="text" style="flex: 2 1 600px; max-width: 700px;   
+  animation: fadeUp 1.2s ease-out forwards;">
+
+    <h2 style="color: #3c4f99;">Quem sou eu?</h2>
+
+    <div style="text-align: justify;">
+      <p>
+      Sou Psicólogo e Neuropsicólogo, com atuação baseada na Terapia Cognitivo-Comportamental. Realizo avaliação psicológica e neuropsicológica baseada em evidências científicas, utilizando instrumentos padronizados e critérios diagnósticos fundamentados no DSM-5.
+<br>
+<br>
+Meu objetivo é oferecer um atendimento pautado na empatia, no respeito e na psicoeducação. Busco orientar cada pessoa para o desenvolvimento de uma vida mais funcional, com maior autonomia e com redução do sofrimento psicológico.
+      </p>
+
+<div style="margin-top: 30px;">
+    <a href="https://br.linkedin.com/in/wallace-souza-caldas-b6a073203" 
+       target="_blank" 
+       style="
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            background-color: transparent; 
+            color: #1e3a8a; 
+            padding: 14px 28px; 
+            font-size: 0.95rem; 
+            font-weight: 700; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            border: 2px solid rgba(30, 58, 138, 0.2);
+            transition: all 0.3s ease;
+            font-family: 'Bricolage Grotesque', sans-serif;
+       " 
+       onmouseover="this.style.borderColor='#1e3a8a'; this.style.backgroundColor='rgba(30, 58, 138, 0.05)'; this.style.transform='translateY(-2px)';" 
+       onmouseout="this.style.borderColor='rgba(30, 58, 138, 0.2)'; this.style.backgroundColor='transparent'; this.style.transform='translateY(0)';"
+    >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+       Conheça minha trajetória Profissional
+    </a>
+<a href="https://wa.me/5513996321749" 
+   target="_blank" 
+   style="
+        display: inline-flex; 
+        align-items: center; 
+        gap: 10px; 
+        background-color: transparent; 
+        color: #1e3a8a; 
+        padding: 14px 28px; 
+        font-size: 0.95rem; 
+        font-weight: 700; 
+        border-radius: 12px; 
+        text-decoration: none; 
+        border: 2px solid rgba(30, 58, 138, 0.2);
+        transition: all 0.3s ease;
+        font-family: 'Bricolage Grotesque', sans-serif;
+        margin-left: 12px;
+   " 
+   onmouseover="this.style.borderColor='#1e3a8a'; this.style.backgroundColor='rgba(30, 58, 138, 0.05)'; this.style.transform='translateY(-2px)';" 
+   onmouseout="this.style.borderColor='rgba(30, 58, 138, 0.2)'; this.style.backgroundColor='transparent'; this.style.transform='translateY(0)';"
+>
+
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.029-.967-.272-.099-.47-.148-.669.15-.198.297-.768.966-.941 1.164-.173.198-.347.223-.644.074-.297-.148-1.255-.463-2.39-1.475-.883-.787-1.479-1.759-1.651-2.056-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.148-.173.198-.297.297-.495.099-.198.05-.371-.025-.52-.074-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.371-.272.297-1.04 1.016-1.04 2.475s1.065 2.871 1.213 3.069c.149.198 2.095 3.2 5.077 4.487.709.306 1.261.489 1.692.626.711.226 1.358.194 1.87.118.571-.085 1.758-.718 2.006-1.412.247-.694.247-1.29.173-1.412-.074-.124-.272-.198-.57-.347zM12.004 2.003c-5.523 0-10 4.478-10 10 0 1.768.463 3.425 1.272 4.86L2 22l5.273-1.372c1.394.761 2.992 1.194 4.731 1.194 5.523 0 10-4.478 10-10s-4.477-10-10-10z"/>
+</svg>
+
+Fale comigo no WhatsApp
+
+</a>
+    </div>
+  </div>
+
+
+</section>
 
 
 <section id="jornada-clareza" style="
@@ -985,91 +1093,10 @@ header .topo h1 {
             border-bottom: 1px solid rgba(30,58,138,0.2);
             padding-bottom: 8px;
         ">
-            Falar com o Especialista
+            Marcar um horário
         </a>
     </div>
 </section>
-
-<section id="sobre"
-  style="
-    max-width: 1100px;
-    margin: 80px auto;
-    padding: 60px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    background-color: #f3f4f9;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(11,29,81,0.1);
-      font-family: 'Bricolage Grotesque', sans-serif;
-  ">
-
-  <div class="photo" style="position: relative; flex: 1 1 320px; max-width: 320px; margin: 0 auto;">
-    <img
-      class="foto-perfil"
-      src="https://i.imgur.com/uaetXXP.jpeg"
-      alt="Wallace foto"
-      loading="lazy"
-      style="
-        width: 320px;
-        height: 320px;
-  
-  animation: fadeUp 1.2s ease-out forwards;
-        object-fit: cover;
-        border-radius: 20px;
-        border: 5px solid #247BA0;
-        box-shadow: 0 8px 20px rgba(11,29,81,0.2);
-
-      "
-    />
-
-  </div>
-
-
-  <div class="text" style="flex: 2 1 600px; max-width: 700px;   
-  animation: fadeUp 1.2s ease-out forwards;">
-
-    <h2 style="color: #3c4f99;">Quem sou eu?</h2>
-
-    <div style="text-align: justify;">
-      <p>
-      Atuo como Neuropsicólogo e Terapeuta Cognitivo-Comportamental em Santos e Online para todo Brasil. Minha formação permite que eu ofereça mais do que escuta: ofereço clareza diagnóstica e ferramentas práticas. Seja na investigação de transtornos cognitivos ou no tratamento de demandas emocionais, meu foco é aplicar o que há de mais avançado na neurociência para promover mudanças reais e mensuráveis na vida de cada pessoa que atendo.
-      </p>
-<div style="margin-top: 30px;">
-    <a href="https://br.linkedin.com/in/wallace-souza-caldas-b6a073203" 
-       target="_blank" 
-       style="
-            display: inline-flex; 
-            align-items: center; 
-            gap: 10px; 
-            background-color: transparent; 
-            color: #1e3a8a; 
-            padding: 14px 28px; 
-            font-size: 0.95rem; 
-            font-weight: 700; 
-            border-radius: 12px; 
-            text-decoration: none; 
-            border: 2px solid rgba(30, 58, 138, 0.2);
-            transition: all 0.3s ease;
-            font-family: 'Bricolage Grotesque', sans-serif;
-       " 
-       onmouseover="this.style.borderColor='#1e3a8a'; this.style.backgroundColor='rgba(30, 58, 138, 0.05)'; this.style.transform='translateY(-2px)';" 
-       onmouseout="this.style.borderColor='rgba(30, 58, 138, 0.2)'; this.style.backgroundColor='transparent'; this.style.transform='translateY(0)';"
-    >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-        </svg>
-       Conheça minha trajetória Profissional
-    </a>
-</div>
-    </div>
-  </div>
-
-
-</section>
-
-
 
 </section>
 <!-- Certificações -->
@@ -1220,19 +1247,19 @@ header .topo h1 {
     <div>
       <span class="icon" aria-hidden="true"></span>
       <h3>Cirurgia Bariátrica e Vasectomia</h3>
-      <p>Prepare-se para sua cirurgia com a segurança necessária. Realizo a avaliação emocional e emito o laudo psicológico exigido, com foco em uma decisão consciente e ética para sua nova fase de vida.</p>
+      <p>Realizo a avaliaçãoe emito o laudo psicológico exigido, com foco em uma decisão consciente e ética para sua nova fase de vida.</p>
     </div>
 
     <div>
       <span class="icon" aria-hidden="true"></span>
       <h3>Investigação de Transtornos</h3>
-      <p>Dificuldades de atenção, memória ou organização? Através de testes científicos, identificamos o funcionamento cerebral para dar um diagnóstico claro e um direcionamento clínico preciso.</p>
+      <p>Através de testes científicos, avalio o funcionamento cerebral para dar um diagnóstico e um direcionamento clínico preciso.</p>
     </div>
 
     <div>
       <span class="icon" aria-hidden="true"></span>
       <h3>Psicoterapia</h3>
-      <p>Tratamento focado em resultados para ansiedade e depressão. Utilizo a Terapia Cognitivo-Comportamental para ajudar você a reestruturar pensamentos e desenvolver ferramentas práticas para o dia a dia.</p>
+      <p>Utilizo a Terapia Cognitivo-Comportamental para ajudar você a reestruturar pensamentos e desenvolver ferramentas práticas para o dia a dia.</p>
     </div>
   </div>
 </section></section>
